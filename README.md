@@ -74,7 +74,6 @@ You can reach me for freelance work or collaboration:
 - Telegram: [@Amanel0](https://t.me/Amanel0)
 - Kwork: https://kwork.com/user/ama_ls | https://kwork.ru/user/ama_ls
 - Fiverr: https://www.fiverr.com/s/xXLZ6Na
-- Discord (less active here): `ama_ls_87386`
 
 ---
 
@@ -148,4 +147,3 @@ Backend разработчик и человек, который автомат�
 - Telegram: [@Amanel0](https://t.me/Amanel0)
 - Kwork: https://kwork.com/user/ama_ls | https://kwork.ru/user/ama_ls
 - Fiverr: https://www.fiverr.com/s/xXLZ6Na
-- Discord (не особо активен тут): `ama_ls_87386`
