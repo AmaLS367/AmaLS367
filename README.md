@@ -70,8 +70,11 @@ More repositories in the list below show smaller utilities and experiments that 
 
 You can reach me for freelance work or collaboration:
 
-- GitHub: [AmaLS367](https://github.com/AmaLS367)
-- Email: `levonlevonyan@gmail.com`
+- Email: `levonlevonyanxx@gmail.com`
+- Telegram: [@Amanel0](https://t.me/Amanel0)
+- Kwork: https://kwork.com/user/ama_ls | https://kwork.ru/user/ama_ls
+- Fiverr: https://www.fiverr.com/s/xXLZ6Na
+- Discord (less active here): `ama_ls_87386`
 
 ---
 
@@ -141,5 +144,8 @@ Backend разработчик и человек, который автомат�
 
 По вопросам разработки, фриланс задач и сотрудничества:
 
-- GitHub: [AmaLS367](https://github.com/AmaLS367)
-- Email: `levonlevonyan@gmail.com`
+- Email: `levonlevonyanxx@gmail.com`
+- Telegram: [@Amanel0](https://t.me/Amanel0)
+- Kwork: https://kwork.com/user/ama_ls | https://kwork.ru/user/ama_ls
+- Fiverr: https://www.fiverr.com/s/xXLZ6Na
+- Discord (не особо активен тут): `ama_ls_87386`
