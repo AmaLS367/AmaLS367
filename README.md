@@ -59,9 +59,6 @@ A few repositories that represent how I work.
 - [evwc-basic](https://github.com/AmaLS367/evwc-basic)  
   WordPress plugin that validates emails via Mailgun, syncs suppression lists and exposes simple settings in admin.
 
-- [design-lab](https://github.com/AmaLS367/design-lab)  
-  Frontend design lab with layouts, animations and UI experiments in pure HTML, CSS and JavaScript.
-
 More repositories in the list below show smaller utilities and experiments that I use in freelance or everyday work.
 
 ---
@@ -131,9 +128,6 @@ Backend разработчик и человек, который автомат�
 
 - [evwc-basic](https://github.com/AmaLS367/evwc-basic)  
   Плагин WordPress для проверки email адресов через Mailgun и работы со списками блокировок.
-
-- [design-lab](https://github.com/AmaLS367/design-lab)  
-  Набор интерфейсных экспериментов и анимаций на чистом HTML, CSS и JavaScript.
 
 Остальные репозитории внизу профиля дополняют картину: там утилиты, учебные проекты и отдельные куски боевых решений из фриланса.
 
