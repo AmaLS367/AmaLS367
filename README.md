@@ -1,71 +1,66 @@
 # AmaLS367
 
-Backend developer and automation engineer. I build practical tools around Python, web scraping, Telegram bots, e-commerce and AI assisted workflows. Most of my projects started as real client tasks or internal tools and then evolved into reusable products.
+Backend developer and automation engineer building practical tools around Python, web scraping, Telegram, e-commerce and AI-assisted workflows. Most projects start as real client work and then evolve into reusable products.
 
 ---
 
 ## About me (EN)
 
-I focus on three main directions:
+I focus on three directions that bring measurable value—saved hours, less routine, better data structure:
 
-- Backend and automation in Python
-- Chat and voice tools on top of Telegram and external APIs
+- Backend services and automation in Python
+- Chat and voice tools for Telegram and external APIs
 - E-commerce helpers for WordPress, ocStore and amoCRM
 
-I like projects where code brings direct measurable value: saved hours, less routine, more structure in data. Most repositories here are either real freelance cases or side products that grew out of those cases.
+### How I work
 
-### Tech stack
+- I start from the business flow, prototype quickly, and iterate with metrics in mind.
+- Code is kept production-ready: logging, error handling, deployment notes, and docs.
+- Solutions are container-friendly when needed, but lean when that is faster.
 
-**Core**
+### Core stack
 
-- Python, Django, FastAPI (where needed)
-- PostgreSQL, SQLite, basic SQL tooling
-- Async stack: aiogram, httpx, asyncio
+**Backend and data**
+
+- Python (Django, FastAPI where it is justified)
+- PostgreSQL, SQLite, and SQL utilities
+- Async: aiogram, httpx, asyncio
 
 **Automation and parsing**
 
 - Playwright, requests, BeautifulSoup
-- Excel and data processing with pandas
+- Excel/data processing with pandas
 
-**Web and plugins**
+**Web and integrations**
 
-- PHP for WordPress and amoCRM integrations
-- JavaScript, HTML, CSS for UI and small frontends
+- PHP for WordPress and amoCRM plugins
+- JavaScript, HTML, CSS for small frontends
 
-**Tools and environment**
+**Tools**
 
-- Git, GitHub and GitLab
-- Windows as the main development environment
-- Docker where it is justified
+- GitHub/GitLab, Docker when it adds value
+- Windows as the primary environment
 
 ---
 
 ## Featured projects (EN)
 
-A few repositories that represent how I work.
+A few repositories that reflect my day-to-day work:
 
-- [Invoice_bot](https://github.com/AmaLS367/Invoice_bot)  
-  Telegram bot for OCR based invoice processing. Accepts images or PDFs, extracts fields, lets user fix data and exports structured results.
+- [InvoiceFlowBot](https://github.com/AmaLS367/InvoiceFlowBot) — Telegram bot for OCR-based invoice processing. Accepts images or PDFs, extracts fields, lets users correct data, and exports structured results.
+- [AmoDocsEngine](https://github.com/AmaLS367/AmoDocsEngine) — PHP document generator for amoCRM that produces .docx files from templates on common shared hosting.
+- [evwc-basic](https://github.com/AmaLS367/evwc-basic) — WordPress plugin that validates emails via Mailgun, syncs suppression lists, and exposes simple admin settings.
+- [NomiAssistantTG](https://github.com/AmaLS367/NomiAssistantTG) — Telegram assistant bot that automates routine steps for users and operators.
+- [PopupHelperWP](https://github.com/AmaLS367/PopupHelperWP) — WordPress helper for building configurable popups to promote offers and capture leads.
+- [booking-offers-parser](https://github.com/AmaLS367/booking-offers-parser) — Django scraper that aggregates booking data from several sites into one normalized admin interface.
 
-- [amo_doc_generator](https://github.com/AmaLS367/amo_doc_generator)  
-  PHP based document generator for amoCRM. Produces .docx documents for deals and contacts from templates on typical shared hosting.
-
-- [web-parser-project](https://github.com/AmaLS367/web-parser-project)  
-  Django scraper that aggregates booking information from several sites into one place, with normalized slots and admin interface.
-
-- [bybit_p2p_monitor](https://github.com/AmaLS367/bybit_p2p_monitor)  
-  Playwright based Bybit P2P monitor that watches USDT pairs and sends Telegram alerts on profitable price changes.
-
-- [evwc-basic](https://github.com/AmaLS367/evwc-basic)  
-  WordPress plugin that validates emails via Mailgun, syncs suppression lists and exposes simple settings in admin.
-
-More repositories in the list below show smaller utilities and experiments that I use in freelance or everyday work.
+More repositories below show utilities and experiments that started as real freelance tasks.
 
 ---
 
 ## Contacts (EN)
 
-You can reach me for freelance work or collaboration:
+For freelance work or collaboration:
 
 - Email: `levonlevonyanxx@gmail.com`
 - Telegram: [@Amanel0](https://t.me/Amanel0)
@@ -76,13 +71,19 @@ You can reach me for freelance work or collaboration:
 
 ## Обо мне (RU)
 
-Backend разработчик и человек, который автоматизирует рутину. Основные направления работы:
+Backend разработчик и инженер по автоматизации. Делаю практичные инструменты на Python, для парсинга, Телеграм-ботов, e-commerce и AI-ассистентов. Большинство репозиториев выросли из реальных задач клиентов.
 
-- Python и автоматизация процессов
-- Телеграм боты и голосовые инструменты поверх внешних API
-- Вспомогательные модули и плагины для WordPress, ocStore, amoCRM
+### Чем занимаюсь
 
-Большинство проектов в профиле появились из реальных задач клиентов. После завершения задачи я стараюсь вычистить код и оставить репозиторий в состоянии, когда его можно использовать повторно или расширять под новые сценарии.
+- Бэкенд и автоматизация процессов на Python
+- Чат- и голосовые инструменты для Телеграм и внешних API
+- Модули и плагины для WordPress, ocStore, amoCRM
+
+### Подход к работе
+
+- Начинаю с бизнес-процесса, быстро собираю прототип, дорабатываю по метрикам.
+- Оставляю код в боевом состоянии: логирование, обработка ошибок, инструкции по запуску.
+- Использую контейнеры, когда это ускоряет доставку, но избегаю лишней сложности.
 
 ### Технологии
 
@@ -99,43 +100,34 @@ Backend разработчик и человек, который автомат�
 
 **Веб и интеграции**
 
-- PHP для WordPress плагинов и amoCRM
+- PHP для WordPress и amoCRM
 - JavaScript, HTML, CSS для интерфейсов и небольших фронтенд проектов
 
 **Инструменты**
 
-- Git, GitHub, GitLab
-- Основная рабочая среда Windows
-- Docker там, где это обосновано задачей
+- GitHub, GitLab, Docker по необходимости
+- Основная рабочая среда — Windows
 
 ---
 
 ## Основные проекты (RU)
 
-Несколько репозиториев, которые хорошо показывают мой подход к работе.
+Примеры репозиториев, которые показывают мой подход:
 
-- [Invoice_bot](https://github.com/AmaLS367/Invoice_bot)  
-  Телеграм бот для обработки счетов с помощью OCR. Принимает изображения и PDF, вытаскивает данные, дает возможность правки и выгружает результат в удобном формате.
+- [InvoiceFlowBot](https://github.com/AmaLS367/InvoiceFlowBot) — Телеграм-бот для обработки счетов через OCR. Принимает изображения и PDF, вытаскивает данные, дает возможность правки и выгружает результат в удобном формате.
+- [AmoDocsEngine](https://github.com/AmaLS367/AmoDocsEngine) — Генератор документов для amoCRM на PHP. Формирует .docx по шаблонам на основе сделок и контактов, работает на обычном хостинге.
+- [evwc-basic](https://github.com/AmaLS367/evwc-basic) — Плагин WordPress для проверки email адресов через Mailgun и работы со списками блокировок.
+- [NomiAssistantTG](https://github.com/AmaLS367/NomiAssistantTG) — Телеграм-ассистент, который автоматизирует рутинные шаги для пользователей и операторов.
+- [PopupHelperWP](https://github.com/AmaLS367/PopupHelperWP) — WordPress-решение для создания настраиваемых попапов, помогающих продвигать офферы и собирать лиды.
+- [booking-offers-parser](https://github.com/AmaLS367/booking-offers-parser) — Django-парсер, который собирает данные о бронированиях с нескольких сайтов и дает нормализованный просмотр через админку.
 
-- [amo_doc_generator](https://github.com/AmaLS367/amo_doc_generator)  
-  Генератор документов для amoCRM на PHP. Формирует .docx по шаблонам на основе сделок и контактов, работает на обычном хостинге.
-
-- [web-parser-project](https://github.com/AmaLS367/web-parser-project)  
-  Django проект для парсинга сайтов с бронированием. Собирает слоты в одном месте и дает управляемый просмотр через админку.
-
-- [bybit_p2p_monitor](https://github.com/AmaLS367/bybit_p2p_monitor)  
-  Скрипт мониторинга P2P рынка Bybit на основе Playwright. Следит за ценами и присылает уведомления в Телеграм.
-
-- [evwc-basic](https://github.com/AmaLS367/evwc-basic)  
-  Плагин WordPress для проверки email адресов через Mailgun и работы со списками блокировок.
-
-Остальные репозитории внизу профиля дополняют картину: там утилиты, учебные проекты и отдельные куски боевых решений из фриланса.
+Остальные репозитории в профиле дополняют картину: утилиты, учебные проекты и выделенные части боевых решений.
 
 ---
 
 ## Контакты (RU)
 
-По вопросам разработки, фриланс задач и сотрудничества:
+По вопросам разработки и сотрудничества:
 
 - Email: `levonlevonyanxx@gmail.com`
 - Telegram: [@Amanel0](https://t.me/Amanel0)
