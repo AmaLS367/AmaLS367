@@ -52,7 +52,7 @@ A few repositories that reflect my day-to-day work:
 - [evwc-basic](https://github.com/AmaLS367/evwc-basic) — WordPress plugin that validates emails via Mailgun, syncs suppression lists, and exposes simple admin settings.
 - [NomiAssistantTG](https://github.com/AmaLS367/NomiAssistantTG) — Telegram assistant bot that automates routine steps for users and operators.
 - [PopupHelperWP](https://github.com/AmaLS367/PopupHelperWP) — WordPress helper for building configurable popups to promote offers and capture leads.
-- [booking-offers-parser](https://github.com/AmaLS367/booking-offers-parser) — Django scraper that aggregates booking data from several sites into one normalized admin interface.
+- [TestizerFunnelEngine](https://github.com/AmaLS367/TestizerFunnelEngine) — Email funnel engine for Testizer.com
 
 More repositories below show utilities and experiments that started as real freelance tasks.
 
@@ -119,7 +119,7 @@ Backend разработчик и инженер по автоматизации
 - [evwc-basic](https://github.com/AmaLS367/evwc-basic) — Плагин WordPress для проверки email адресов через Mailgun и работы со списками блокировок.
 - [NomiAssistantTG](https://github.com/AmaLS367/NomiAssistantTG) — Телеграм-ассистент, который автоматизирует рутинные шаги для пользователей и операторов.
 - [PopupHelperWP](https://github.com/AmaLS367/PopupHelperWP) — WordPress-решение для создания настраиваемых попапов, помогающих продвигать офферы и собирать лиды.
-- [booking-offers-parser](https://github.com/AmaLS367/booking-offers-parser) — Django-парсер, который собирает данные о бронированиях с нескольких сайтов и дает нормализованный просмотр через админку.
+- [TestizerFunnelEngine](https://github.com/AmaLS367/TestizerFunnelEngine) — Полноценный рабочий скрипт для email-рассылки для Testizer.com
 
 Остальные репозитории в профиле дополняют картину: утилиты, учебные проекты и выделенные части боевых решений.
 
