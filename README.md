@@ -29,9 +29,10 @@
 
 ## About me (EN)
 
-Backend developer and automation engineer. I build practical tools around Python, web scraping, Telegram, e-commerce and AI assisted workflows. Most projects start as real client work and then evolve into reusable products.
+Backend developer and automation engineer. I build practical tools around Python, web scraping, Telegram, e-commerce and AI assisted workflows.  
+Most projects start as real client work and then evolve into reusable products.
 
-I focus on three directions that bring measurable value: saved hours, less routine, better data structure.
+I focus on three directions that bring measurable value: saved hours, less routine, better data structure:
 
 - Backend services and automation in Python  
 - Chat and voice tools for Telegram and external APIs  
@@ -39,33 +40,68 @@ I focus on three directions that bring measurable value: saved hours, less routi
 
 ### How I work
 
-- Start from the business flow, then design data model and background jobs  
+- Start from the business flow, then design data model, API and background jobs  
 - Keep code production ready: logging, error handling, deployment notes, docs  
 - Use containers when it helps delivery, keep solutions lean when speed matters  
 
-### Core stack
+---
 
-**Backend and data**
+## Обо мне (RU)
 
-- Python (Django, FastAPI where it is justified)  
-- PostgreSQL, SQLite, SQL utilities  
-- Async stack: aiogram, httpx, asyncio  
+Backend разработчик и инженер по автоматизации. Делаю практичные инструменты на Python: парсинг, Телеграм ботов, e-commerce решения и AI ассистентов.  
+Большинство репозиториев выросли из реальных задач клиентов.
 
-**Automation and parsing**
+### Чем занимаюсь
 
-- Playwright, requests, BeautifulSoup  
-- Excel and tabular data processing with pandas  
+- Бэкенд и автоматизация процессов на Python  
+- Чат и голосовые инструменты для Телеграм и внешних API  
+- Модули и плагины для WordPress, ocStore, amoCRM  
 
-**Web and integrations**
+### Подход к работе
 
-- PHP for WordPress and amoCRM plugins  
-- JavaScript, HTML, CSS for small frontends  
+- Начинаю с бизнес процесса, быстро собираю прототип, дорабатываю по метрикам  
+- Оставляю код в боевом состоянии: логирование, обработка ошибок, инструкции по запуску  
+- Использую контейнеры, когда это ускоряет доставку, избегаю лишней сложности  
 
-**Tools**
+---
 
-- GitHub and GitLab  
-- Docker when it adds value  
-- Windows as the primary environment  
+## Tech stack
+
+<p align="center">
+  <!-- Languages -->
+  <img src="https://img.shields.io/badge/Python-3.x-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" />
+  <img src="https://img.shields.io/badge/PHP-8.x-777BB4?style=for-the-badge&logo=php&logoColor=white" alt="PHP" />
+  <img src="https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?style=for-the-badge&logo=javascript&logoColor=000000" alt="JavaScript" />
+</p>
+
+<p align="center">
+  <!-- Python ecosystem -->
+  <img src="https://img.shields.io/badge/Django-backend-092E20?style=for-the-badge&logo=django&logoColor=white" alt="Django" />
+  <img src="https://img.shields.io/badge/FastAPI-where_justified-009688?style=for-the-badge&logo=fastapi&logoColor=white" alt="FastAPI" />
+  <img src="https://img.shields.io/badge/aiogram-Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white" alt="aiogram" />
+  <img src="https://img.shields.io/badge/pandas-data-150458?style=for-the-badge&logo=pandas&logoColor=white" alt="pandas" />
+</p>
+
+<p align="center">
+  <!-- Databases -->
+  <img src="https://img.shields.io/badge/PostgreSQL-DB-4169E1?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL" />
+  <img src="https://img.shields.io/badge/SQLite-light-003B57?style=for-the-badge&logo=sqlite&logoColor=white" alt="SQLite" />
+</p>
+
+<p align="center">
+  <!-- Web / CMS / CRM -->
+  <img src="https://img.shields.io/badge/WordPress-plugins-21759B?style=for-the-badge&logo=wordpress&logoColor=white" alt="WordPress" />
+  <img src="https://img.shields.io/badge/ocStore/OpenCart-ecommerce-FF6600?style=for-the-badge" alt="ocStore" />
+  <img src="https://img.shields.io/badge/amoCRM-integrations-0B88EE?style=for-the-badge" alt="amoCRM" />
+</p>
+
+<p align="center">
+  <!-- Tools -->
+  <img src="https://img.shields.io/badge/Playwright-scraping-2EAD33?style=for-the-badge" alt="Playwright" />
+  <img src="https://img.shields.io/badge/BeautifulSoup-parsing-181717?style=for-the-badge" alt="BeautifulSoup" />
+  <img src="https://img.shields.io/badge/Docker-on_demand-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker" />
+  <img src="https://img.shields.io/badge/Windows-main_env-0078D6?style=for-the-badge&logo=windows&logoColor=white" alt="Windows" />
+</p>
 
 ---
 
@@ -83,7 +119,7 @@ A few repositories that reflect my day to day work:
   WordPress plugin that validates emails via Mailgun, syncs suppression lists, and exposes simple admin settings.
 
 - [NomiAssistantTG](https://github.com/AmaLS367/NomiAssistantTG)  
-  Telegram assistant bot that automates routine steps for users and operators.
+  Telegram bot that connects users to the Nomi API and lets them talk to Nomi directly inside Telegram.
 
 - [PopupHelperWP](https://github.com/AmaLS367/PopupHelperWP)  
   WordPress helper for building configurable popups to promote offers and capture leads.
@@ -92,47 +128,6 @@ A few repositories that reflect my day to day work:
   Email funnel engine for Testizer.com.
 
 More repositories below show utilities and experiments that started as real freelance tasks.
-
----
-
-## Обо мне (RU)
-
-Backend разработчик и инженер по автоматизации. Делаю практичные инструменты на Python: парсинг, Телеграм ботов, e-commerce решения и AI ассистентов. Большинство репозиториев выросли из реальных задач клиентов.
-
-### Чем занимаюсь
-
-- Бэкенд и автоматизация процессов на Python  
-- Чат и голосовые инструменты для Телеграм и внешних API  
-- Модули и плагины для WordPress, ocStore, amoCRM  
-
-### Подход к работе
-
-- Начинаю с бизнес процесса, быстро собираю прототип, дорабатываю по метрикам  
-- Оставляю код в боевом состоянии: логирование, обработка ошибок, инструкции по запуску  
-- Использую контейнеры, когда это ускоряет доставку, избегаю лишней сложности  
-
-### Технологии
-
-**Основной стек**
-
-- Python, Django, иногда FastAPI  
-- PostgreSQL, SQLite, базовый SQL  
-- Async стек: aiogram, httpx, asyncio  
-
-**Парсинг и автоматизация**
-
-- Playwright, requests, BeautifulSoup  
-- Работа с Excel и табличными данными через pandas  
-
-**Веб и интеграции**
-
-- PHP для WordPress и amoCRM  
-- JavaScript, HTML, CSS для интерфейсов и небольших фронтенд проектов  
-
-**Инструменты**
-
-- GitHub, GitLab, Docker по необходимости  
-- Основная рабочая среда Windows  
 
 ---
 
@@ -150,7 +145,7 @@ Backend разработчик и инженер по автоматизации
   Плагин WordPress для проверки email адресов через Mailgun и работы со списками блокировок.
 
 - [NomiAssistantTG](https://github.com/AmaLS367/NomiAssistantTG)  
-  Телеграм ассистент, который автоматизирует рутинные шаги для пользователей и операторов.
+  Телеграм бот, который подключен к Nomi API и позволяет общаться с Nomi прямо в Телеграме.
 
 - [PopupHelperWP](https://github.com/AmaLS367/PopupHelperWP)  
   WordPress решение для создания настраиваемых попапов, помогающих продвигать офферы и собирать лиды.
@@ -159,14 +154,6 @@ Backend разработчик и инженер по автоматизации
   Рабочий скрипт для email рассылки для Testizer.com.
 
 Остальные репозитории дополняют картину: утилиты, учебные проекты и выделенные части боевых решений.
-
----
-
-## GitHub stats
-
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=AmaLS367&show_icons=true&hide_title=true" alt="GitHub stats" />
-</p>
 
 ---
 
