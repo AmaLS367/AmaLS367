@@ -78,7 +78,6 @@ Most repositories here started as real client tasks and then turned into reusabl
 ## Tech stack
 
 <p align="center">
-  <!-- Languages -->
   <a href="https://www.python.org/" target="_blank">
     <img src="https://img.shields.io/badge/Python-3.x-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" />
   </a>
@@ -91,7 +90,6 @@ Most repositories here started as real client tasks and then turned into reusabl
 </p>
 
 <p align="center">
-  <!-- Python ecosystem -->
   <a href="https://www.djangoproject.com/" target="_blank">
     <img src="https://img.shields.io/badge/Django-backend-092E20?style=for-the-badge&logo=django&logoColor=white" alt="Django" />
   </a>
@@ -107,7 +105,6 @@ Most repositories here started as real client tasks and then turned into reusabl
 </p>
 
 <p align="center">
-  <!-- Databases -->
   <a href="https://www.postgresql.org/" target="_blank">
     <img src="https://img.shields.io/badge/PostgreSQL-DB-4169E1?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL" />
   </a>
@@ -117,7 +114,6 @@ Most repositories here started as real client tasks and then turned into reusabl
 </p>
 
 <p align="center">
-  <!-- Web / CMS / CRM -->
   <a href="https://wordpress.org/" target="_blank">
     <img src="https://img.shields.io/badge/WordPress-plugins-21759B?style=for-the-badge&logo=wordpress&logoColor=white" alt="WordPress" />
   </a>
@@ -130,7 +126,6 @@ Most repositories here started as real client tasks and then turned into reusabl
 </p>
 
 <p align="center">
-  <!-- Tools -->
   <a href="https://playwright.dev/" target="_blank">
     <img src="https://img.shields.io/badge/Playwright-scraping-2EAD33?style=for-the-badge" alt="Playwright" />
   </a>
@@ -145,6 +140,18 @@ Most repositories here started as real client tasks and then turned into reusabl
   </a>
 </p>
 
+---
+
+## 📊 GitHub Stats
+
+<p align="center">
+  <a href="https://github.com/AmaLS367">
+    <img src="https://github-readme-stats.vercel.app/api?username=AmaLS367&show_icons=true&theme=dark&hide_border=true&bg_color=0d1117" alt="AmaLS367 GitHub Stats" />
+  </a>
+  <a href="https://github.com/AmaLS367">
+    <img src="https://github-readme-stats.vercel.app/api/top-langs?username=AmaLS367&layout=compact&theme=dark&hide_border=true&bg_color=0d1117" alt="Top Languages" />
+  </a>
+</p>
 ---
 
 ## Featured projects (EN)
