@@ -142,18 +142,6 @@ Most repositories here started as real client tasks and then turned into reusabl
 
 ---
 
-## 📊 GitHub Stats
-
-<p align="center">
-  <a href="https://github.com/AmaLS367">
-    <img src="https://github-readme-stats.vercel.app/api?username=AmaLS367&show_icons=true&theme=dark&hide_border=true&bg_color=0d1117" alt="AmaLS367 GitHub Stats" />
-  </a>
-  <a href="https://github.com/AmaLS367">
-    <img src="https://github-readme-stats.vercel.app/api/top-langs?username=AmaLS367&layout=compact&theme=dark&hide_border=true&bg_color=0d1117" alt="Top Languages" />
-  </a>
-</p>
----
-
 ## Featured projects (EN)
 
 A few repositories that reflect my day to day work:
