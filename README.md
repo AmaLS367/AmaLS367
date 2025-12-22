@@ -184,7 +184,7 @@ A few repositories that reflect my day to day work:
 - [TestizerFunnelEngine](https://github.com/AmaLS367/TestizerFunnelEngine)  
   Email funnel engine for Testizer.com.  
   <p>
-    <img src="https://img.shields.io/badge/Stack-PHP%20%7C%20Email%20funnel-777BB4?style=flat-square" alt="TestizerFunnelEngine stack" />
+    <img src="https://img.shields.io/badge/Stack-Python%20%7C%20Email%20funnel-777BB4?style=flat-square" alt="TestizerFunnelEngine stack" />
     <img src="https://img.shields.io/badge/Status-in_production-success?style=flat-square" alt="TestizerFunnelEngine status" />
   </p>
 
@@ -234,7 +234,7 @@ More repositories below show utilities and experiments that started as real free
 - [TestizerFunnelEngine](https://github.com/AmaLS367/TestizerFunnelEngine)  
   Рабочий скрипт для email рассылки для Testizer.com.  
   <p>
-    <img src="https://img.shields.io/badge/Стек-PHP%20%7C%20Email%20funnel-777BB4?style=flat-square" alt="TestizerFunnelEngine stack ru" />
+    <img src="https://img.shields.io/badge/Стек-Python%20%7C%20Email%20funnel-777BB4?style=flat-square" alt="TestizerFunnelEngine stack ru" />
     <img src="https://img.shields.io/badge/Статус-production-success?style=flat-square" alt="TestizerFunnelEngine status ru" />
   </p>
 
