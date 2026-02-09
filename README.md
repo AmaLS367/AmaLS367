@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  <a href="mailto:levonlevonyanxx@gmail.com">
+  <a href="mailto:amalsdev367@gmail.com">
     <img src="https://img.shields.io/badge/Email-levonlevonyanxx%40gmail.com-0078D4?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
   </a>
   <a href="https://t.me/Amanel0">
