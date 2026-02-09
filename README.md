@@ -6,7 +6,7 @@
 
 <p align="center">
   <a href="mailto:amalsdev367@gmail.com">
-    <img src="https://img.shields.io/badge/Email-levonlevonyanxx%40gmail.com-0078D4?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
+    <img src="https://img.shields.io/badge/Email-amalsdev367@gmail.com-0078D4?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
   </a>
   <a href="https://t.me/Amanel0">
     <img src="https://img.shields.io/badge/Telegram-@Amanel0-26A5E4?style=for-the-badge&logo=telegram&logoColor=white" alt="Telegram" />
