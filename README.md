@@ -1,241 +1,197 @@
-<h1 align="center">Hey, I'm Ama 👋</h1>
+<div align="center">
 
-<p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=18&pause=1200&center=true&vCenter=true&width=600&lines=Backend+developer;Telegram+bots+%7C+OCR+%7C+automation;e-commerce+tools+%7C+CRM+integrations" alt="Typing SVG" />
+# ⚡ Ama
+
+### Backend & Automation Engineer
+
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=24&duration=2800&pause=700&center=true&vCenter=true&width=980&lines=I+build+software+that+actually+gets+used;Bots%2C+backends%2C+integrations%2C+automation;Clean+delivery+with+real+business+value" alt="Typing SVG" />
+
+<p>
+  <a href="https://github.com/AmaLS367?tab=followers">
+    <img src="https://img.shields.io/github/followers/AmaLS367?style=for-the-badge" alt="GitHub followers">
+  </a>
+  <a href="https://github.com/sponsors/AmaLS367">
+    <img src="https://img.shields.io/badge/Sponsor-GitHub-ff69b4?style=for-the-badge&logo=githubsponsors" alt="GitHub Sponsors">
+  </a>
+  <a href="https://t.me/amals367">
+    <img src="https://img.shields.io/badge/Telegram-Contact-26A5E4?style=for-the-badge&logo=telegram" alt="Telegram">
+  </a>
+  <a href="https://www.kwork.ru/user/amals367">
+    <img src="https://img.shields.io/badge/Kwork-Freelance-FFA500?style=for-the-badge" alt="Kwork">
+  </a>
+  <a href="https://www.fiverr.com/amals367">
+    <img src="https://img.shields.io/badge/Fiverr-Profile-1DBF73?style=for-the-badge&logo=fiverr" alt="Fiverr">
+  </a>
 </p>
 
-<p align="center">
-  <a href="mailto:amalsdev367@gmail.com">
-    <img src="https://img.shields.io/badge/Email-amalsdev367@gmail.com-0078D4?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
-  </a>
-  <a href="https://t.me/Amanel0">
-    <img src="https://img.shields.io/badge/Telegram-@Amanel0-26A5E4?style=for-the-badge&logo=telegram&logoColor=white" alt="Telegram" />
-  </a>
-  <a href="https://kwork.ru/user/ama_ls">
-    <img src="https://img.shields.io/badge/Kwork-freelance-4CAF50?style=for-the-badge" alt="Kwork" />
-  </a>
-  <a href="https://www.fiverr.com/s/xXLZ6Na">
-    <img src="https://img.shields.io/badge/Fiverr-gigs-00B22D?style=for-the-badge&logo=fiverr&logoColor=white" alt="Fiverr" />
-  </a>
-  <a href="https://github.com/AmaLS367">
-    <img src="https://img.shields.io/badge/GitHub-AmaLS367-181717?style=for-the-badge&logo=github" alt="GitHub" />
-  </a>
-  <a href="https://gitlab.com/AmaLS367">
-    <img src="https://img.shields.io/badge/GitLab-AmaLS367-FC6D26?style=for-the-badge&logo=gitlab&logoColor=white" alt="GitLab" />
-  </a>
-</p>
+**Python • Telegram Bots • Scraping • CRM Integrations • Internal Tools**
+
+</div>
 
 ---
 
-## About me (EN)
+## 🚀 What I actually build
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Role-Backend%20%7C%20Automation-1f6feb?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/Focus-Telegram%20bots%20%7C%20OCR%20%7C%20e--commerce-0d1117?style=for-the-badge" />
-</p>
-
-I build backend services and automation around **Python**, **Telegram**, **web scraping**, **e commerce** and **CRM tools**.  
-Most repositories here started as real client tasks and then turned into reusable building blocks.
-
-**What I usually ship**
-
-- ⚙️ Backend services and automation in Python  
-- 💬 Chat and voice tools for Telegram and external APIs  
-- 🛒 E commerce helpers for WordPress, ocStore and amoCRM  
-
-**How I work**
-
-- 🔍 Start from the business flow, then design data model, API and background jobs  
-- 🧱 Keep code production ready: logging, error handling, deployment notes, docs  
-- 📦 Use containers when it helps delivery, keep solutions lean when speed matters  
-
----
-
-## Обо мне (RU)
-
-<p align="center">
-  <img src="https://img.shields.io/badge/Роль-backend%20разработчик%20%7C%20автоматизация-1f6feb?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/Фокус-боты%2C%20парсинг%2C%20e--commerce-0d1117?style=for-the-badge" />
-</p>
-
-Я backend разработчик и инженер по автоматизации. Делаю практичные инструменты на **Python** вокруг парсинга, Телеграм ботов, e commerce и AI ассистентов.  
-Большинство репозиториев здесь выросли из реальных задач клиентов, а не из учебных примеров.
-
-**Что я делаю**
-
-- ⚙️ Бэкенд и автоматизацию процессов на Python  
-- 💬 Чат и голосовые инструменты для Телеграм и внешних API  
-- 🛒 Модули и плагины для WordPress, ocStore, amoCRM  
-
-**Как подхожу к работе**
-
-- 🔍 Начинаю с бизнес процесса, быстро собираю прототип, дорабатываю по метрикам  
-- 🧱 Оставляю код в боевом состоянии: логирование, обработка ошибок, инструкции по запуску  
-- 📦 Использую контейнеры, когда это ускоряет доставку, избегаю лишней сложности  
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <h3>⚙️ Backend Systems</h3>
+      <p>Python services, APIs, business logic, background jobs, database-driven tools, and production-focused architecture.</p>
+    </td>
+    <td width="50%" valign="top">
+      <h3>🤖 Telegram Bots</h3>
+      <p>Admin flows, private tools, AI assistants, OCR bots, media bots, and automation around real workflows.</p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h3>🕸️ Scraping & Automation</h3>
+      <p>Data collection pipelines, parsers, browser automation, content workflows, and task reduction through code.</p>
+    </td>
+    <td width="50%" valign="top">
+      <h3>🔌 Integrations</h3>
+      <p>CRM integrations, APIs, webhooks, document generation, notifications, internal dashboards, and service glue code.</p>
+    </td>
+  </tr>
+</table>
 
 ---
 
-## Tech stack
+## 🧠 How I work
 
-<p align="center">
-  <a href="https://www.python.org/" target="_blank">
-    <img src="https://img.shields.io/badge/Python-3.x-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" />
-  </a>
-  <a href="https://www.php.net/" target="_blank">
-    <img src="https://img.shields.io/badge/PHP-8.x-777BB4?style=for-the-badge&logo=php&logoColor=white" alt="PHP" />
-  </a>
-  <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-    <img src="https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?style=for-the-badge&logo=javascript&logoColor=000000" alt="JavaScript" />
-  </a>
-</p>
+<div align="center">
 
-<p align="center">
-  <a href="https://www.djangoproject.com/" target="_blank">
-    <img src="https://img.shields.io/badge/Django-backend-092E20?style=for-the-badge&logo=django&logoColor=white" alt="Django" />
-  </a>
-  <a href="https://fastapi.tiangolo.com/" target="_blank">
-    <img src="https://img.shields.io/badge/FastAPI-where_justified-009688?style=for-the-badge&logo=fastapi&logoColor=white" alt="FastAPI" />
-  </a>
-  <a href="https://docs.aiogram.dev/en/latest/" target="_blank">
-    <img src="https://img.shields.io/badge/aiogram-Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white" alt="aiogram" />
-  </a>
-  <a href="https://pandas.pydata.org/" target="_blank">
-    <img src="https://img.shields.io/badge/pandas-data-150458?style=for-the-badge&logo=pandas&logoColor=white" alt="pandas" />
-  </a>
-</p>
+| Principle | What it means |
+|---|---|
+| 🧱 Structure first | Clear modules, clear boundaries, less chaos later |
+| 📚 Docs matter | Documentation grows with the project |
+| 🧪 Reliability | Tests and checks where they actually help |
+| 🚢 Real delivery | Not demo-trash, but software that can be run and maintained |
+| 🎯 Business focus | The code should solve a real problem, not just exist |
 
-<p align="center">
-  <a href="https://www.postgresql.org/" target="_blank">
-    <img src="https://img.shields.io/badge/PostgreSQL-DB-4169E1?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL" />
-  </a>
-  <a href="https://www.sqlite.org/" target="_blank">
-    <img src="https://img.shields.io/badge/SQLite-light-003B57?style=for-the-badge&logo=sqlite&logoColor=white" alt="SQLite" />
-  </a>
-</p>
-
-<p align="center">
-  <a href="https://wordpress.org/" target="_blank">
-    <img src="https://img.shields.io/badge/WordPress-plugins-21759B?style=for-the-badge&logo=wordpress&logoColor=white" alt="WordPress" />
-  </a>
-  <a href="https://ocstore.com/" target="_blank">
-    <img src="https://img.shields.io/badge/ocStore/OpenCart-ecommerce-FF6600?style=for-the-badge" alt="ocStore" />
-  </a>
-  <a href="https://www.amocrm.com/" target="_blank">
-    <img src="https://img.shields.io/badge/amoCRM-integrations-0B88EE?style=for-the-badge" alt="amoCRM" />
-  </a>
-</p>
-
-<p align="center">
-  <a href="https://playwright.dev/" target="_blank">
-    <img src="https://img.shields.io/badge/Playwright-scraping-2EAD33?style=for-the-badge" alt="Playwright" />
-  </a>
-  <a href="https://www.crummy.com/software/BeautifulSoup/" target="_blank">
-    <img src="https://img.shields.io/badge/BeautifulSoup-parsing-181717?style=for-the-badge" alt="BeautifulSoup" />
-  </a>
-  <a href="https://www.docker.com/" target="_blank">
-    <img src="https://img.shields.io/badge/Docker-on_demand-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker" />
-  </a>
-  <a href="https://www.microsoft.com/windows" target="_blank">
-    <img src="https://img.shields.io/badge/Windows-main_env-0078D6?style=for-the-badge&logo=windows&logoColor=white" alt="Windows" />
-  </a>
-</p>
+</div>
 
 ---
 
-## Featured projects (EN)
+## 🔥 Selected projects
 
-A few repositories that reflect my day to day work:
-
-- [InvoiceFlowBot](https://github.com/AmaLS367/InvoiceFlowBot)  
-  Telegram bot for OCR based invoice processing. Accepts images or PDFs, extracts fields, lets users correct data, and exports structured results.  
-  <p>
-    <img src="https://img.shields.io/badge/Stack-Python%20%7C%20Telegram%20bot%20%7C%20OCR-3776AB?style=flat-square" alt="InvoiceFlowBot stack" />
-    <img src="https://img.shields.io/badge/Status-in_production-success?style=flat-square" alt="InvoiceFlowBot status" />
-  </p>
-
-- [AmoDocsEngine](https://github.com/AmaLS367/AmoDocsEngine)  
-  PHP document generator for amoCRM that produces .docx files from templates on common shared hosting.  
-  <p>
-    <img src="https://img.shields.io/badge/Stack-PHP%20%7C%20amoCRM%20%7C%20DOCX-777BB4?style=flat-square" alt="AmoDocsEngine stack" />
-    <img src="https://img.shields.io/badge/Status-in_production-success?style=flat-square" alt="AmoDocsEngine status" />
-  </p>
-
-- [evwc-basic](https://github.com/AmaLS367/evwc-basic)  
-  WordPress plugin that validates emails via Mailgun, syncs suppression lists, and exposes simple admin settings.  
-  <p>
-    <img src="https://img.shields.io/badge/Stack-PHP%20%7C%20WordPress%20%7C%20Mailgun-21759B?style=flat-square" alt="evwc-basic stack" />
-    <img src="https://img.shields.io/badge/Status-used_in_client_projects-success?style=flat-square" alt="evwc-basic status" />
-  </p>
-
-- [NomiAssistantTG](https://github.com/AmaLS367/NomiAssistantTG)  
-  Telegram bot that connects users to the Nomi API and lets them talk to Nomi directly inside Telegram.  
-  <p>
-    <img src="https://img.shields.io/badge/Stack-Python%20%7C%20Telegram%20bot%20%7C%20Nomi_API-2CA5E0?style=flat-square" alt="NomiAssistantTG stack" />
-    <img src="https://img.shields.io/badge/Status-live-success?style=flat-square" alt="NomiAssistantTG status" />
-  </p>
-
-- [PopupHelperWP](https://github.com/AmaLS367/PopupHelperWP)  
-  WordPress helper for building configurable popups to promote offers and capture leads.  
-  <p>
-    <img src="https://img.shields.io/badge/Stack-PHP%20%7C%20WordPress%20%7C%20UI-21759B?style=flat-square" alt="PopupHelperWP stack" />
-    <img src="https://img.shields.io/badge/Status-used_in_client_projects-success?style=flat-square" alt="PopupHelperWP status" />
-  </p>
-
-- [TestizerFunnelEngine](https://github.com/AmaLS367/TestizerFunnelEngine)  
-  Email funnel engine for Testizer.com.  
-  <p>
-    <img src="https://img.shields.io/badge/Stack-Python%20%7C%20Email%20funnel-777BB4?style=flat-square" alt="TestizerFunnelEngine stack" />
-    <img src="https://img.shields.io/badge/Status-in_production-success?style=flat-square" alt="TestizerFunnelEngine status" />
-  </p>
-
-More repositories below show utilities and experiments that started as real freelance tasks.
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <h3><a href="https://github.com/AmaLS367/InvoiceFlowBot">📄 InvoiceFlowBot</a></h3>
+      <p>OCR-powered Telegram bot for invoice processing with structured architecture, tests, Docker setup, and strong documentation.</p>
+    </td>
+    <td width="50%" valign="top">
+      <h3><a href="https://github.com/AmaLS367/AmoDocsEngine">📑 AmoDocsEngine</a></h3>
+      <p>amoCRM document generation engine with OAuth, DOCX templates, caching, and shared-hosting-friendly delivery.</p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h3><a href="https://github.com/AmaLS367/NomiAssistantTG">🎙️ NomiAssistantTG</a></h3>
+      <p>Telegram AI assistant with voice support, external APIs, offline speech recognition, and async processing.</p>
+    </td>
+    <td width="50%" valign="top">
+      <h3><a href="https://github.com/AmaLS367/TestizerFunnelEngine">📬 TestizerFunnelEngine</a></h3>
+      <p>Email funnel and analytics system with Brevo integration, MySQL, background processing, and product-style structure.</p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h3><a href="https://github.com/AmaLS367/ama-freelance-crm">🗂️ ama-freelance-crm</a></h3>
+      <p>Backend-focused freelance CRM built with FastAPI, Aiogram, PostgreSQL, and typed service layers.</p>
+    </td>
+    <td width="50%" valign="top">
+      <h3><a href="https://github.com/AmaLS367/Trading-research-assistant">📈 Trading-research-assistant</a></h3>
+      <p>Research-oriented Python system with a mature structure, tests, docs, and long-term project discipline.</p>
+    </td>
+  </tr>
+</table>
 
 ---
 
-## Основные проекты (RU)
+## 🛠️ Tech stack
 
-Примеры репозиториев, которые показывают мой подход:
+<details>
+  <summary><strong>Open stack overview</strong></summary>
+  <br>
 
-- [InvoiceFlowBot](https://github.com/AmaLS367/InvoiceFlowBot)  
-  Телеграм бот для обработки счетов через OCR. Принимает изображения и PDF, вытаскивает данные, дает возможность правки и выгружает результат в удобном формате.  
-  <p>
-    <img src="https://img.shields.io/badge/Стек-Python%20%7C%20Telegram%20bot%20%7C%20OCR-3776AB?style=flat-square" alt="InvoiceFlowBot stack ru" />
-    <img src="https://img.shields.io/badge/Статус-production-success?style=flat-square" alt="InvoiceFlowBot status ru" />
-  </p>
+### Backend
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)
+![Aiogram](https://img.shields.io/badge/Aiogram-2CA5E0?style=flat-square&logo=telegram&logoColor=white)
+![Django](https://img.shields.io/badge/Django-092E20?style=flat-square&logo=django&logoColor=white)
+![PHP](https://img.shields.io/badge/PHP-777BB4?style=flat-square&logo=php&logoColor=white)
 
-- [AmoDocsEngine](https://github.com/AmaLS367/AmoDocsEngine)  
-  Генератор документов для amoCRM на PHP. Формирует .docx по шаблонам на основе сделок и контактов, работает на обычном хостинге.  
-  <p>
-    <img src="https://img.shields.io/badge/Стек-PHP%20%7C%20amoCRM%20%7C%20DOCX-777BB4?style=flat-square" alt="AmoDocsEngine stack ru" />
-    <img src="https://img.shields.io/badge/Статус-production-success?style=flat-square" alt="AmoDocsEngine status ru" />
-  </p>
+### Databases
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white)
+![SQLite](https://img.shields.io/badge/SQLite-003B57?style=flat-square&logo=sqlite&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white)
 
-- [evwc-basic](https://github.com/AmaLS367/evwc-basic)  
-  Плагин WordPress для проверки email адресов через Mailgun и работы со списками блокировок.  
-  <p>
-    <img src="https://img.shields.io/badge/Стек-PHP%20%7C%20WordPress%20%7C%20Mailgun-21759B?style=flat-square" alt="evwc-basic stack ru" />
-    <img src="https://img.shields.io/badge/Статус-боевые_проекты-success?style=flat-square" alt="evwc-basic status ru" />
-  </p>
+### Frontend
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
+![React](https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB)
+![Vite](https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white)
 
-- [NomiAssistantTG](https://github.com/AmaLS367/NomiAssistantTG)  
-  Телеграм бот, который подключен к Nomi API и позволяет общаться с Nomi прямо в Телеграме.  
-  <p>
-    <img src="https://img.shields.io/badge/Стек-Python%20%7C%20Telegram%20bot%20%7C%20Nomi_API-2CA5E0?style=flat-square" alt="NomiAssistantTG stack ru" />
-    <img src="https://img.shields.io/badge/Статус-live-success?style=flat-square" alt="NomiAssistantTG status ru" />
-  </p>
+### DevOps & Tooling
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
+![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat-square&logo=github-actions&logoColor=white)
+![Pytest](https://img.shields.io/badge/Pytest-0A9EDC?style=flat-square&logo=pytest&logoColor=white)
+![Ruff](https://img.shields.io/badge/Ruff-000000?style=flat-square)
+![Playwright](https://img.shields.io/badge/Playwright-2EAD33?style=flat-square&logo=playwright&logoColor=white)
 
-- [PopupHelperWP](https://github.com/AmaLS367/PopupHelperWP)  
-  WordPress решение для создания настраиваемых попапов, помогающих продвигать офферы и собирать лиды.  
-  <p>
-    <img src="https://img.shields.io/badge/Стек-PHP%20%7C%20WordPress%20%7C%20UI-21759B?style=flat-square" alt="PopupHelperWP stack ru" />
-    <img src="https://img.shields.io/badge/Статус-боевые_проекты-success?style=flat-square" alt="PopupHelperWP status ru" />
-  </p>
+</details>
 
-- [TestizerFunnelEngine](https://github.com/AmaLS367/TestizerFunnelEngine)  
-  Рабочий скрипт для email рассылки для Testizer.com.  
-  <p>
-    <img src="https://img.shields.io/badge/Стек-Python%20%7C%20Email%20funnel-777BB4?style=flat-square" alt="TestizerFunnelEngine stack ru" />
-    <img src="https://img.shields.io/badge/Статус-production-success?style=flat-square" alt="TestizerFunnelEngine status ru" />
-  </p>
+---
 
-Остальные репозитории дополняют картину: утилиты, учебные проекты и выделенные части боевых решений.
+## 🎯 Current focus
+
+- polishing public repositories into strong showcases  
+- growing deeper as a backend engineer  
+- building useful automation and business tools  
+- improving product quality, docs, and delivery  
+- making open-source work more sponsor-worthy  
+
+---
+
+## 🤝 Open for
+
+<table>
+  <tr>
+    <td>💼 Freelance backend work</td>
+    <td>🤖 Telegram bot development</td>
+  </tr>
+  <tr>
+    <td>🕷️ Scraping and automation tasks</td>
+    <td>🔗 CRM and API integrations</td>
+  </tr>
+  <tr>
+    <td>🏢 Internal tools for small businesses</td>
+    <td>❤️ Open-source support and sponsorship</td>
+  </tr>
+</table>
+
+---
+
+## 📫 Reach me
+
+<div align="center">
+
+<p>
+  <a href="https://t.me/amals367">
+    <img src="https://img.shields.io/badge/Telegram-@amals367-26A5E4?style=for-the-badge&logo=telegram" alt="Telegram">
+  </a>
+  <a href="https://github.com/sponsors/AmaLS367">
+    <img src="https://img.shields.io/badge/Sponsor-GitHub-ff69b4?style=for-the-badge&logo=githubsponsors" alt="Sponsor">
+  </a>
+  <a href="https://www.kwork.ru/user/amals367">
+    <img src="https://img.shields.io/badge/Kwork-Open%20for%20work-FFA500?style=for-the-badge" alt="Kwork">
+  </a>
+  <a href="https://www.fiverr.com/amals367">
+    <img src="https://img.shields.io/badge/Fiverr-Available-1DBF73?style=for-the-badge&logo=fiverr" alt="Fiverr">
+  </a>
+</p>
+
+<img src="https://capsule-render.vercel.app/api?type=waving&height=120&color=0:0f172a,100:2563eb&section=footer&text=Useful%20software.%20Clean%20delivery.%20Real%20projects.&fontColor=ffffff&fontSize=24&animation=fadeIn" alt="Footer banner" />
+
+</div>
