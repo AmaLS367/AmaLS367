@@ -16,7 +16,7 @@ const projectsData: Project[] = [
   {
     name: "TradeMcp",
     tagline: "Trading MCP server",
-    tags: ["MCP", "Python", "API"],
+    tags: ["MCP", "TypeScript", "React"],
     description: "A Model Context Protocol server exposing trading data and operations to LLM clients with typed tools and safe execution boundaries.",
     overview: "TradeMcp is a Model Context Protocol server that lets LLM clients interact with trading data and broker operations through strictly typed tools. It focuses on safe execution boundaries, predictable schemas, and reproducible responses so an agent can reason about markets without leaking unsafe actions.",
     highlights: [
@@ -25,14 +25,14 @@ const projectsData: Project[] = [
       "Pluggable broker/data adapters behind a single interface",
       "Structured errors and deterministic JSON payloads for agent consumption"
     ],
-    stack: ["Python", "MCP", "AsyncIO", "Pydantic", "REST"],
+    stack: ["TypeScript", "React", "Firebase", "CCXT", "MCP"],
     status: "Active",
     link: { label: "GitHub", href: "https://github.com/AmaLS367/TradeMcp" }
   },
   {
     name: "FaceScore",
     tagline: "Face analysis pipeline",
-    tags: ["CV", "Python", "Service"],
+    tags: ["Tauri", "React", "Rust"],
     description: "An end-to-end pipeline for facial feature scoring, packaged as a service with deterministic outputs and batch processing.",
     overview: "FaceScore is an end-to-end facial analysis pipeline that turns raw images into deterministic, structured scores. It is packaged as a service with batch processing, so the same input always produces the same output and large datasets can be processed without manual steps.",
     highlights: [
@@ -41,14 +41,14 @@ const projectsData: Project[] = [
       "Pre-processing pipeline: detection, alignment, normalization",
       "Structured JSON output suitable for downstream analytics"
     ],
-    stack: ["Python", "OpenCV", "ONNX", "FastAPI", "Docker"],
+    stack: ["Tauri", "React", "TypeScript", "Rust", "Claude Vision"],
     status: "Active",
     link: { label: "GitHub", href: "https://github.com/AmaLS367/FaceScore" }
   },
   {
     name: "Factoria",
     tagline: "Modular automation factory",
-    tags: ["Automation", "Workers", "Queues"],
+    tags: ["Python", "FastAPI", "React"],
     description: "A workflow engine that chains data sources, transforms, and actions into reusable production-ready automations.",
     overview: "Factoria is a modular automation engine. Workflows are composed from small, reusable building blocks — sources, transforms, and actions — and executed by background workers backed by a queue, so automations behave the same in development and production.",
     highlights: [
@@ -57,14 +57,14 @@ const projectsData: Project[] = [
       "Declarative workflow definitions, easy to version and review",
       "Observability hooks: per-run logs, status, and metrics"
     ],
-    stack: ["Python", "Redis", "PostgreSQL", "Workers", "Docker"],
+    stack: ["Python", "FastAPI", "React", "TypeScript", "SQLite", "LLMs"],
     status: "Active",
     link: { label: "GitLab", href: "https://gitlab.com/AmaLS367/factoria" }
   },
   {
     name: "AmoDocsEngine",
     tagline: "Document generation engine",
-    tags: ["Docs", "Templating", "PDF"],
+    tags: ["PHP", "amoCRM", "DOCX"],
     description: "Template-driven document engine producing structured contracts, invoices, and reports from typed payloads.",
     overview: "AmoDocsEngine turns typed payloads into polished documents — contracts, invoices, reports — using reusable templates. It separates content from presentation so the same data can be rendered into different formats without rewriting business logic.",
     highlights: [
@@ -73,14 +73,14 @@ const projectsData: Project[] = [
       "Reusable partials for headers, footers, and signature blocks",
       "Deterministic rendering suitable for legal and financial docs"
     ],
-    stack: ["Python", "Jinja2", "WeasyPrint", "DOCX", "Pydantic"],
+    stack: ["PHP", "PhpWord", "Composer", "PHPUnit", "amoCRM API"],
     status: "Active",
     link: { label: "GitHub", href: "https://github.com/AmaLS367/AmoDocsEngine" }
   },
   {
     name: "AmaNotify",
     tagline: "Self-hosted notification hub",
-    tags: ["Self-hosted", "API", "Realtime"],
+    tags: ["Node.js", "React", "TypeScript"],
     description: "Lightweight self-hosted notification platform with channel adapters, queues, and a clean HTTP API.",
     overview: "AmaNotify is a lightweight, self-hosted notification hub. Applications push events to a single HTTP API and AmaNotify fans them out to the right channels — email, Telegram, webhooks — with queueing, retries, and per-channel rate limits.",
     highlights: [
@@ -89,14 +89,14 @@ const projectsData: Project[] = [
       "Per-channel rate limits and quiet hours",
       "Runs anywhere Docker runs — no third-party SaaS required"
     ],
-    stack: ["Node.js", "TypeScript", "Redis", "PostgreSQL", "Docker"],
+    stack: ["Node.js", "TypeScript", "Express", "React", "PostgreSQL", "Redis"],
     status: "Active",
     link: { label: "GitHub", href: "https://github.com/AmaLS367/AmaNotify" }
   },
   {
     name: "TestizerFunnelEngine",
     tagline: "Quiz & funnel engine",
-    tags: ["Funnel", "Quiz", "Engine"],
+    tags: ["Python", "MySQL", "Brevo"],
     description: "Configurable engine for building interactive quizzes and lead funnels with branching logic, scoring, and result delivery.",
     overview: "TestizerFunnelEngine is a configurable engine for building interactive quizzes and conversion funnels. Flows are defined as data — steps, branches, scoring rules, and outcomes — so new funnels can be launched without rewriting application code.",
     highlights: [
@@ -105,7 +105,7 @@ const projectsData: Project[] = [
       "Pluggable result delivery: email, webhook, or downstream API",
       "Clean separation between engine, content, and presentation"
     ],
-    stack: ["TypeScript", "Node.js", "REST", "JSON Schema"],
+    stack: ["Python", "MySQL", "Brevo API", "Docker", "Pytest"],
     status: "Active",
     link: { label: "GitHub", href: "https://github.com/AmaLS367/TestizerFunnelEngine" }
   }
