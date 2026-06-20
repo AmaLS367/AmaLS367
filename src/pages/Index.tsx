@@ -321,9 +321,7 @@ const Index = () => {
 
               <div style={{ display: "flex", flexWrap: "wrap", gap: "10px", marginTop: "28px" }}>
                 <a
-                  href="https://t.me/Amanel0"
-                  target="_blank"
-                  rel="noreferrer noopener"
+                  href="mailto:amalsdev367@gmail.com"
                   style={{
                     display: "inline-flex", alignItems: "center", gap: "7px",
                     padding: "10px 20px", borderRadius: "7px",
