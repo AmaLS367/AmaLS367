@@ -319,6 +319,60 @@ const Index = () => {
               </h1>
               <p style={{ margin: "22px 0 0", maxWidth: "62ch", color: "#a8927a", fontSize: "15px" }}>I build practical systems for real workflows: APIs, automations, desktop tools, document engines, data tools, and self-hosted platforms.</p>
 
+              <div style={{ display: "flex", flexWrap: "wrap", gap: "10px", marginTop: "28px" }}>
+                <a
+                  href="https://t.me/Amanel0"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  style={{
+                    display: "inline-flex", alignItems: "center", gap: "7px",
+                    padding: "10px 20px", borderRadius: "7px",
+                    background: "var(--c1)", color: "#0a0805",
+                    fontWeight: 700, fontSize: "14px", textDecoration: "none",
+                    letterSpacing: ".01em"
+                  }}
+                >
+                  Hire me ↗
+                </a>
+                <a
+                  href="https://t.me/Amanel0"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  style={{
+                    display: "inline-flex", alignItems: "center", gap: "7px",
+                    padding: "10px 20px", borderRadius: "7px",
+                    border: "1px solid #2c2114", background: "rgba(20,15,8,.6)",
+                    color: "#ece0cf", fontSize: "14px", textDecoration: "none"
+                  }}
+                >
+                  Telegram
+                </a>
+                <a
+                  href="mailto:amalsdev367@gmail.com"
+                  style={{
+                    display: "inline-flex", alignItems: "center", gap: "7px",
+                    padding: "10px 20px", borderRadius: "7px",
+                    border: "1px solid #2c2114", background: "rgba(20,15,8,.6)",
+                    color: "#ece0cf", fontSize: "14px", textDecoration: "none"
+                  }}
+                >
+                  Email
+                </a>
+                <a
+                  href="https://github.com/AmaLS367"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  style={{
+                    display: "inline-flex", alignItems: "center", gap: "7px",
+                    padding: "10px 20px", borderRadius: "7px",
+                    border: "1px solid #2c2114", background: "rgba(20,15,8,.6)",
+                    color: "#ece0cf", fontSize: "14px", textDecoration: "none"
+                  }}
+                >
+                  GitHub
+                </a>
+              </div>
+
               {/* Terminal window */}
               <div
                 onClick={focusInput}
