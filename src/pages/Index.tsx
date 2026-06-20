@@ -1,147 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
-
-type Project = {
-  name: string;
-  tagline: string;
-  tags: string[];
-  description: string;
-  overview: string;
-  highlights: string[];
-  stack: string[];
-  status: string;
-  link: { label: string; href: string };
-};
-
-const projectsData: Project[] = [
-  {
-    name: "TradeMcp",
-    tagline: "Trading MCP server",
-    tags: ["MCP", "TypeScript", "React"],
-    description: "A Model Context Protocol server exposing trading data and operations to LLM clients with typed tools and safe execution boundaries.",
-    overview: "TradeMcp is a Model Context Protocol server that lets LLM clients interact with trading data and broker operations through strictly typed tools. It focuses on safe execution boundaries, predictable schemas, and reproducible responses so an agent can reason about markets without leaking unsafe actions.",
-    highlights: [
-      "Typed MCP tools for quotes, history, orders, and account state",
-      "Safety layer: dry-run mode, allow-lists, and explicit confirmations",
-      "Pluggable broker/data adapters behind a single interface",
-      "Structured errors and deterministic JSON payloads for agent consumption"
-    ],
-    stack: ["TypeScript", "React", "Firebase", "CCXT", "MCP"],
-    status: "Active",
-    link: { label: "GitHub", href: "https://github.com/AmaLS367/TradeMcp" }
-  },
-  {
-    name: "FaceScore",
-    tagline: "Face analysis pipeline",
-    tags: ["Tauri", "React", "Rust"],
-    description: "An end-to-end pipeline for facial feature scoring, packaged as a service with deterministic outputs and batch processing.",
-    overview: "FaceScore is an end-to-end facial analysis pipeline that turns raw images into deterministic, structured scores. It is packaged as a service with batch processing, so the same input always produces the same output and large datasets can be processed without manual steps.",
-    highlights: [
-      "Deterministic scoring with versioned models and configs",
-      "Batch and single-image modes over a clean HTTP API",
-      "Pre-processing pipeline: detection, alignment, normalization",
-      "Structured JSON output suitable for downstream analytics"
-    ],
-    stack: ["Tauri", "React", "TypeScript", "Rust", "Claude Vision"],
-    status: "Active",
-    link: { label: "GitHub", href: "https://github.com/AmaLS367/FaceScore" }
-  },
-  {
-    name: "Factoria",
-    tagline: "Modular automation factory",
-    tags: ["Python", "FastAPI", "React"],
-    description: "A workflow engine that chains data sources, transforms, and actions into reusable production-ready automations.",
-    overview: "Factoria is a modular automation engine. Workflows are composed from small, reusable building blocks — sources, transforms, and actions — and executed by background workers backed by a queue, so automations behave the same in development and production.",
-    highlights: [
-      "Composable nodes: sources, transforms, and side-effect actions",
-      "Queue-backed execution with retries and idempotency keys",
-      "Declarative workflow definitions, easy to version and review",
-      "Observability hooks: per-run logs, status, and metrics"
-    ],
-    stack: ["Python", "FastAPI", "React", "TypeScript", "SQLite", "LLMs"],
-    status: "Active",
-    link: { label: "GitLab", href: "https://gitlab.com/AmaLS367/factoria" }
-  },
-  {
-    name: "AmoDocsEngine",
-    tagline: "Document generation engine",
-    tags: ["PHP", "amoCRM", "DOCX"],
-    description: "Template-driven document engine producing structured contracts, invoices, and reports from typed payloads.",
-    overview: "AmoDocsEngine turns typed payloads into polished documents — contracts, invoices, reports — using reusable templates. It separates content from presentation so the same data can be rendered into different formats without rewriting business logic.",
-    highlights: [
-      "Typed payload → template → document, with strict validation",
-      "PDF and DOCX outputs from a single template definition",
-      "Reusable partials for headers, footers, and signature blocks",
-      "Deterministic rendering suitable for legal and financial docs"
-    ],
-    stack: ["PHP", "PhpWord", "Composer", "PHPUnit", "amoCRM API"],
-    status: "Active",
-    link: { label: "GitHub", href: "https://github.com/AmaLS367/AmoDocsEngine" }
-  },
-  {
-    name: "AmaNotify",
-    tagline: "Self-hosted notification hub",
-    tags: ["Node.js", "React", "TypeScript"],
-    description: "Lightweight self-hosted notification platform with channel adapters, queues, and a clean HTTP API.",
-    overview: "AmaNotify is a lightweight, self-hosted notification hub. Applications push events to a single HTTP API and AmaNotify fans them out to the right channels — email, Telegram, webhooks — with queueing, retries, and per-channel rate limits.",
-    highlights: [
-      "One HTTP API, many channels via pluggable adapters",
-      "Queue-backed delivery with retries and dead-letter handling",
-      "Per-channel rate limits and quiet hours",
-      "Runs anywhere Docker runs — no third-party SaaS required"
-    ],
-    stack: ["Node.js", "TypeScript", "Express", "React", "PostgreSQL", "Redis"],
-    status: "Active",
-    link: { label: "GitHub", href: "https://github.com/AmaLS367/AmaNotify" }
-  },
-  {
-    name: "TestizerFunnelEngine",
-    tagline: "Quiz & funnel engine",
-    tags: ["Python", "MySQL", "Brevo"],
-    description: "Configurable engine for building interactive quizzes and lead funnels with branching logic, scoring, and result delivery.",
-    overview: "TestizerFunnelEngine is a configurable engine for building interactive quizzes and conversion funnels. Flows are defined as data — steps, branches, scoring rules, and outcomes — so new funnels can be launched without rewriting application code.",
-    highlights: [
-      "Declarative step + branching logic, versionable as config",
-      "Scoring and segmentation to route users to tailored results",
-      "Pluggable result delivery: email, webhook, or downstream API",
-      "Clean separation between engine, content, and presentation"
-    ],
-    stack: ["Python", "MySQL", "Brevo API", "Docker", "Pytest"],
-    status: "Active",
-    link: { label: "GitHub", href: "https://github.com/AmaLS367/TestizerFunnelEngine" }
-  }
-];
-
-const stackData = [
-  { label: "Backend", items: ["Python", "Node.js", "FastAPI", "Express", "REST", "WebSockets"] },
-  { label: "Automation", items: ["Workers", "Queues", "Schedulers", "MCP", "Scripting"] },
-  { label: "Desktop", items: ["Electron", "Tauri", "PyQt", "Native bridges"] },
-  { label: "Documents", items: ["Templating", "PDF", "DOCX", "Parsing"] },
-  { label: "Data", items: ["PostgreSQL", "SQLite", "Redis", "ETL"] },
-  { label: "Infra", items: ["Docker", "Linux", "Nginx", "Self-hosting", "CI/CD"] }
-];
-
-const contactsData = [
-  { key: "github", value: "AmaLS367", href: "https://github.com/AmaLS367" },
-  { key: "gitlab", value: "AmaLS367", href: "https://gitlab.com/AmaLS367" },
-  { key: "email", value: "amalsdev367@gmail.com", href: "mailto:amalsdev367@gmail.com" },
-  { key: "telegram", value: "@Amanel0", href: "https://t.me/Amanel0" }
-];
-
-const C = {
-  cy: "#ffbe5c",
-  te: "#ff8a3d",
-  tx: "#ece0cf",
-  mu: "#8a7a63",
-  red: "#ff7a7a",
-  am: "#ffd27a"
-};
-
-const themes = {
-  amber: ["#ffbe5c", "#ff8a3d"],
-  cyan: ["#42e6ff", "#2bd4bf"],
-  green: ["#6ef0a0", "#39d353"],
-  mono: ["#e6ddcf", "#b9ac98"]
-};
+import { projectsData } from "@/data/projects";
+import { stackData } from "@/data/stack";
+import { contactsData } from "@/data/contacts";
+import { C, themes, type ThemeName } from "@/data/theme";
 
 type TerminalLine = {
   text: string;
@@ -151,17 +12,17 @@ type TerminalLine = {
 };
 
 const Index = () => {
-  const [accent, setAccent] = useState<"amber" | "cyan" | "green" | "mono">(() => {
+  const [accent, setAccent] = useState<ThemeName>(() => {
     try {
       const saved = localStorage.getItem("amadev_accent");
       if (saved === "amber" || saved === "cyan" || saved === "green" || saved === "mono") {
-        return saved;
+        return saved as ThemeName;
       }
     } catch (e) {}
     return "amber";
   });
 
-  const handleSetAccent = (themeName: "amber" | "cyan" | "green" | "mono") => {
+  const handleSetAccent = (themeName: ThemeName) => {
     try {
       localStorage.setItem("amadev_accent", themeName);
     } catch (e) {}
