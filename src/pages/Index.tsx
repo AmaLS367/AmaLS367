@@ -3,6 +3,7 @@ import { projectsData } from "@/data/projects";
 import { stackData } from "@/data/stack";
 import { contactsData } from "@/data/contacts";
 import { C, themes, type ThemeName } from "@/data/theme";
+import { ServicesSection } from "@/components/Services/ServicesSection";
 
 type TerminalLine = {
   text: string;
@@ -265,6 +266,7 @@ const Index = () => {
             <a href="#top" style={{ flex: "none", display: "inline-flex", alignItems: "center", gap: "6px", padding: "5px 13px", fontSize: "12.5px", textDecoration: "none", color: "#0a0805", background: "var(--c1)", borderRadius: "5px 5px 0 0" }}>● ama.dev</a>
             <a href="#projects" className="text-[#8a7a63] hover:text-[#ece0cf] transition-colors" style={{ flex: "none", padding: "5px 13px", fontSize: "12.5px", textDecoration: "none" }}>projects</a>
             <a href="#stack" className="text-[#8a7a63] hover:text-[#ece0cf] transition-colors" style={{ flex: "none", padding: "5px 13px", fontSize: "12.5px", textDecoration: "none" }}>stack</a>
+            <a href="#services" className="text-[#8a7a63] hover:text-[#ece0cf] transition-colors" style={{ flex: "none", padding: "5px 13px", fontSize: "12.5px", textDecoration: "none" }}>services</a>
             <a href="#contact" className="text-[#8a7a63] hover:text-[#ece0cf] transition-colors" style={{ flex: "none", padding: "5px 13px", fontSize: "12.5px", textDecoration: "none" }}>contact</a>
           </div>
           <div style={{ flex: "none", display: "flex", alignItems: "center", gap: "7px" }} title="theme">
@@ -385,6 +387,8 @@ const Index = () => {
             </div>
           </div>
         </section>
+
+        <ServicesSection />
 
         {/* Projects: directory listing */}
         <section id="projects" style={{ maxWidth: "1120px", margin: "0 auto", padding: "40px 20px" }}>
