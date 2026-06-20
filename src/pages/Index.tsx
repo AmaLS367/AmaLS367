@@ -1,16 +1,10 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import { projectsData } from "@/data/projects";
 import { stackData } from "@/data/stack";
 import { contactsData } from "@/data/contacts";
-import { C, themes, type ThemeName } from "@/data/theme";
+import { themes, type ThemeName } from "@/data/theme";
 import { ServicesSection } from "@/components/Services/ServicesSection";
-
-type TerminalLine = {
-  text: string;
-  color: string;
-  w: string;
-  echo: boolean;
-};
+import { TerminalWidget } from "@/components/Terminal/TerminalWidget";
 
 const Index = () => {
   const [accent, setAccent] = useState<ThemeName>(() => {
@@ -30,180 +24,14 @@ const Index = () => {
     setAccent(themeName);
   };
 
-  const [input, setInput] = useState("");
-  const [lines, setLines] = useState<TerminalLine[]>([]);
-  const [commandHistory, setCommandHistory] = useState<string[]>([]);
-  const [historyIndex, setHistoryIndex] = useState(0);
   const [openName, setOpenName] = useState<string | null>(null);
   const [now, setNow] = useState(Date.now());
-
-  const inputRef = useRef<HTMLInputElement>(null);
-  const outRef = useRef<HTMLDivElement>(null);
-
-  // Initialize banner
-  const getBanner = (): TerminalLine[] => [
-    { text: "ama.dev", color: C.cy, w: "800", echo: false },
-    { text: "backend · automation · desktop tools · self-hosted", color: C.te, w: "600", echo: false },
-    { text: "type 'help' for commands  ·  'cat <project>' to inspect a project", color: C.mu, w: "400", echo: false },
-    { text: "", color: C.tx, w: "400", echo: false }
-  ];
-
-  useEffect(() => {
-    setLines(getBanner());
-  }, []);
 
   // Update clock every second
   useEffect(() => {
     const timer = setInterval(() => setNow(Date.now()), 1000);
     return () => clearInterval(timer);
   }, []);
-
-  // Scroll to bottom of terminal
-  useEffect(() => {
-    if (outRef.current) {
-      outRef.current.scrollTop = outRef.current.scrollHeight;
-    }
-  }, [lines]);
-
-  const makeLine = (text: string, color?: string, w?: string, echo?: boolean): TerminalLine => {
-    return { text, color: color || C.tx, w: w || "400", echo: !!echo };
-  };
-
-  const execCommand = (raw: string): TerminalLine[] => {
-    const cmd = (raw || "").trim();
-    if (!cmd) return [];
-    const parts = cmd.split(/\s+/);
-    const base = parts[0].toLowerCase();
-    const arg = parts.slice(1).join(" ").toLowerCase();
-    const projectNames = projectsData.map(p => p.name);
-
-    if (base === "help") {
-      return [
-        makeLine("COMMANDS", C.cy, "700"),
-        makeLine("  help              show this list"),
-        makeLine("  ls [projects]     list sections or projects"),
-        makeLine("  whoami            who I am"),
-        makeLine("  cat <project>     show project details"),
-        makeLine("  open <project>    open the project repo"),
-        makeLine("  stack             tech stack"),
-        makeLine("  contact           how to reach me"),
-        makeLine("  clear             clear the screen"),
-        makeLine(""),
-      ];
-    }
-    if (base === "ls") {
-      if (arg.startsWith("project")) return [makeLine(projectNames.join("   "), C.te), makeLine("")];
-      return [makeLine("projects/   stack/   contact/   about.txt", C.te), makeLine("")];
-    }
-    if (base === "whoami" || base === "about" || (base === "cat" && (arg === "about" || arg === "about.txt"))) {
-      return [
-        makeLine("amals367", C.cy, "700"),
-        makeLine("Backend, automation & desktop-tools developer."),
-        makeLine("I build practical systems for real workflows: APIs, automations, desktop"),
-        makeLine("tools, document engines, data tools, and self-hosted platforms."),
-        makeLine(""),
-      ];
-    }
-    if (base === "projects") return [makeLine(projectNames.join("   "), C.te), makeLine("")];
-    if (base === "stack") {
-      const out: TerminalLine[] = [];
-      stackData.forEach(g => {
-        out.push(makeLine(g.label.toUpperCase(), C.cy, "700"));
-        out.push(makeLine("  " + g.items.join("  "), C.mu));
-      });
-      out.push(makeLine(""));
-      return out;
-    }
-    if (base === "contact") {
-      const out: TerminalLine[] = [makeLine("how to reach me:", C.cy, "700")];
-      contactsData.forEach(c => out.push(makeLine("  " + (c.key + ":").padEnd(10) + c.value + "   " + c.href)));
-      out.push(makeLine(""));
-      return out;
-    }
-    if (base === "cat") {
-      const p = projectsData.find(x => x.name.toLowerCase() === arg);
-      if (!p) return [makeLine("cat: " + (arg || "?") + ": no such project. try 'ls projects'.", C.red), makeLine("")];
-      const out: TerminalLine[] = [
-        makeLine(p.name, C.cy, "700"),
-        makeLine(p.tagline, C.te),
-        makeLine(""),
-        makeLine(p.overview),
-        makeLine(""),
-        makeLine("highlights", C.cy, "700"),
-      ];
-      p.highlights.forEach(h => out.push(makeLine("  • " + h)));
-      out.push(makeLine(""));
-      out.push(makeLine("stack:  " + p.stack.join(", "), C.mu));
-      out.push(makeLine("status: " + p.status + "   ·   " + p.link.label + ": " + p.link.href, C.mu));
-      out.push(makeLine(""));
-      return out;
-    }
-    if (base === "open") {
-      const p = projectsData.find(x => x.name.toLowerCase() === arg);
-      if (!p) return [makeLine("open: " + (arg || "?") + ": no such project.", C.red), makeLine("")];
-      try { window.open(p.link.href, "_blank", "noopener"); } catch (e) {}
-      return [makeLine("opening " + p.name + " → " + p.link.href, C.te), makeLine("")];
-    }
-    if (base === "echo") return [makeLine(parts.slice(1).join(" ")), makeLine("")];
-    if (base === "date") return [makeLine(new Date().toString(), C.mu), makeLine("")];
-    if (base === "clear") return []; // Handled separately
-    if (base === "banner") return getBanner();
-    if (base === "sudo") return [makeLine("nice try. permission denied.", C.am), makeLine("")];
-
-    return [makeLine("command not found: " + base + "  —  type 'help'", C.red), makeLine("")];
-  };
-
-  const handleRunCommand = (raw: string) => {
-    const trimmed = raw.trim();
-    if (trimmed.toLowerCase() === "clear") {
-      setLines([]);
-      setInput("");
-      if (trimmed) {
-        setCommandHistory(prev => [...prev, trimmed]);
-        setHistoryIndex(commandHistory.length + 1);
-      }
-      return;
-    }
-
-    const echo = makeLine(raw, C.tx, "400", true);
-    const result = execCommand(raw);
-    
-    setLines(prev => [...prev, echo, ...result]);
-    setInput("");
-    
-    if (trimmed) {
-      const newHistory = [...commandHistory, trimmed];
-      setCommandHistory(newHistory);
-      setHistoryIndex(newHistory.length);
-    }
-  };
-
-  const navigateHistory = (direction: number) => {
-    if (!commandHistory.length) return;
-    const nextIdx = Math.max(0, Math.min(commandHistory.length, historyIndex + direction));
-    setHistoryIndex(nextIdx);
-    const value = nextIdx >= commandHistory.length ? "" : commandHistory[nextIdx];
-    setInput(value);
-  };
-
-  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
-    if (e.key === "Enter") {
-      e.preventDefault();
-      handleRunCommand(input);
-    } else if (e.key === "ArrowUp") {
-      e.preventDefault();
-      navigateHistory(-1);
-    } else if (e.key === "ArrowDown") {
-      e.preventDefault();
-      navigateHistory(1);
-    }
-  };
-
-  const focusInput = () => {
-    if (inputRef.current) {
-      inputRef.current.focus();
-    }
-  };
 
   const formatClock = () => {
     const t = new Date(now);
@@ -214,7 +42,6 @@ const Index = () => {
   const activeThemeColors = themes[accent] || themes.amber;
   const c1 = activeThemeColors[0];
   const c2 = activeThemeColors[1];
-  const glowShadow = `0 0 30px ${c2}26`;
 
   return (
     <div
@@ -371,70 +198,9 @@ const Index = () => {
                 </a>
               </div>
 
-              {/* Terminal window */}
-              <div
-                onClick={focusInput}
-                style={{
-                  marginTop: "36px",
-                  border: "1px solid #2c2114",
-                  borderRadius: "10px",
-                  overflow: "hidden",
-                  background: "linear-gradient(180deg,#15100a,#0c0905)",
-                  boxShadow: `${glowShadow}, 0 24px 60px -28px rgba(0,0,0,.85)`,
-                  cursor: "text"
-                }}
-              >
-                <div style={{ display: "flex", alignItems: "center", gap: "8px", padding: "9px 14px", borderBottom: "1px solid #2c2114", background: "rgba(20,15,8,.7)" }}>
-                  <span style={{ color: "var(--c2)", fontSize: "12px" }}>▌</span>
-                  <span style={{ fontSize: "12px", color: "#6b5b45" }}>ama@dev: ~/portfolio — zsh — 80×24</span>
-                </div>
-                <div
-                  className="term-scroll"
-                  ref={outRef}
-                  style={{ height: "330px", overflowY: "auto", padding: "16px 18px 8px", fontSize: "13.5px", lineHeight: 1.6 }}
-                >
-                  {lines.map((ln, idx) => (
-                    <div
-                      key={idx}
-                      style={{
-                        whiteSpace: "pre-wrap",
-                        wordBreak: "break-word",
-                        color: ln.color,
-                        fontWeight: ln.w
-                      }}
-                    >
-                      {ln.echo && <span style={{ color: "var(--c1)", fontWeight: 600 }}>ama@dev:~$ </span>}
-                      {ln.text}
-                    </div>
-                  ))}
-                  <div style={{ display: "flex", alignItems: "center", marginTop: "2px" }}>
-                    <span style={{ color: "var(--c1)", fontWeight: 600, flex: "none" }}>ama@dev:~${" "}</span>
-                    <input
-                      ref={inputRef}
-                      value={input}
-                      onChange={e => setInput(e.target.value)}
-                      onKeyDown={handleKeyDown}
-                      spellCheck="false"
-                      autoComplete="off"
-                      placeholder="type 'help'"
-                      aria-label="terminal input"
-                      style={{
-                        flex: 1,
-                        minWidth: 0,
-                        background: "transparent",
-                        border: "none",
-                        outline: "none",
-                        color: "#fff4e2",
-                        fontFamily: "inherit",
-                        fontSize: "13.5px",
-                        caretColor: "var(--c1)"
-                      }}
-                    />
-                  </div>
-                </div>
-              </div>
+              <TerminalWidget />
               <div style={{ marginTop: "13px", fontSize: "12px", color: "#6b5b45" }}>
-                tip: try <span style={{ color: "var(--c2)" }}>help</span>, <span style={{ color: "var(--c2)" }}>ls projects</span>, <span style={{ color: "var(--c2)" }}>cat trademcp</span>
+                tip: try <span style={{ color: "var(--c2)" }}>help</span>, <span style={{ color: "var(--c2)" }}>ls projects</span>, <span style={{ color: "var(--c2)" }}>case trademcp</span>
               </div>
             </div>
           </div>
