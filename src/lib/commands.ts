@@ -24,16 +24,27 @@ export function getBanner(): TerminalLine[] {
   ];
 }
 
-export function execCommand(raw: string): TerminalLine[] {
+export type TerminalAction =
+  | { type: "none" }
+  | { type: "openUrl"; url: string };
+
+export type CommandResult = {
+  lines: TerminalLine[];
+  action: TerminalAction;
+};
+
+export function execCommand(raw: string): CommandResult {
   const cmd = (raw ?? "").trim();
-  if (!cmd) return [];
+  if (!cmd) return { lines: [], action: { type: "none" } };
   const parts = cmd.split(/\s+/);
   const base = parts[0].toLowerCase();
   const arg = parts.slice(1).join(" ").toLowerCase();
   const projectNames = projectsData.map((p) => p.name);
 
   if (base === "help") {
-    return [
+    return {
+      action: { type: "none" },
+      lines: [
       makeLine("COMMANDS", C.cy, "700"),
       makeLine("  help                 show this list"),
       makeLine("  ls [projects]        list sections or projects"),
@@ -49,26 +60,32 @@ export function execCommand(raw: string): TerminalLine[] {
       makeLine("  telegram             open Telegram"),
       makeLine("  clear                clear the screen"),
       makeLine("")
-    ];
+      ]
+    };
   }
 
   if (base === "ls") {
-    if (arg.startsWith("project")) return [makeLine(projectNames.join("   "), C.te), makeLine("")];
-    return [makeLine("projects/   stack/   services/   contact/   about.txt", C.te), makeLine("")];
+    if (arg.startsWith("project")) return { action: { type: "none" }, lines: [makeLine(projectNames.join("   "), C.te), makeLine("")] };
+    return { action: { type: "none" }, lines: [makeLine("projects/   stack/   services/   contact/   about.txt", C.te), makeLine("")] };
   }
 
   if (base === "whoami" || base === "about" || (base === "cat" && (arg === "about" || arg === "about.txt"))) {
-    return [
+    return {
+      action: { type: "none" },
+      lines: [
       makeLine("amals367", C.cy, "700"),
       makeLine("Backend, automation & desktop-tools developer."),
       makeLine("I build practical systems for real workflows: APIs, automations, desktop"),
       makeLine("tools, document engines, data tools, and self-hosted platforms."),
       makeLine("")
-    ];
+      ]
+    };
   }
 
   if (base === "hire") {
-    return [
+    return {
+      action: { type: "none" },
+      lines: [
       makeLine("how to hire me", C.cy, "700"),
       makeLine("  telegram:  https://t.me/Amanel0", C.te),
       makeLine("  email:     amalsdev367@gmail.com", C.te),
@@ -76,10 +93,11 @@ export function execCommand(raw: string): TerminalLine[] {
       makeLine("I'm open to: project work, integrations, automation, document engines,"),
       makeLine("backend APIs, desktop tools, bots, scrapers, and CRM integrations."),
       makeLine("")
-    ];
+      ]
+    };
   }
 
-  if (base === "projects") return [makeLine(projectNames.join("   "), C.te), makeLine("")];
+  if (base === "projects") return { action: { type: "none" }, lines: [makeLine(projectNames.join("   "), C.te), makeLine("")] };
 
   if (base === "skills" || base === "stack") {
     const out: TerminalLine[] = [];
@@ -88,7 +106,7 @@ export function execCommand(raw: string): TerminalLine[] {
       out.push(makeLine("  " + g.items.join("  "), C.mu));
     });
     out.push(makeLine(""));
-    return out;
+    return { action: { type: "none" }, lines: out };
   }
 
   if (base === "services") {
@@ -98,7 +116,7 @@ export function execCommand(raw: string): TerminalLine[] {
       out.push(makeLine("    " + s.description, C.mu));
     });
     out.push(makeLine(""));
-    return out;
+    return { action: { type: "none" }, lines: out };
   }
 
   if (base === "contact") {
@@ -107,20 +125,26 @@ export function execCommand(raw: string): TerminalLine[] {
       out.push(makeLine("  " + (c.key + ":").padEnd(10) + c.value + "   " + c.href))
     );
     out.push(makeLine(""));
-    return out;
+    return { action: { type: "none" }, lines: out };
   }
 
   if (base === "github") {
-    return [makeLine("→ https://github.com/AmaLS367", C.te), makeLine("")];
+    return {
+      action: { type: "openUrl", url: "https://github.com/AmaLS367" },
+      lines: [makeLine("→ https://github.com/AmaLS367", C.te), makeLine("")]
+    };
   }
 
   if (base === "telegram") {
-    return [makeLine("→ https://t.me/Amanel0", C.te), makeLine("")];
+    return {
+      action: { type: "openUrl", url: "https://t.me/Amanel0" },
+      lines: [makeLine("→ https://t.me/Amanel0", C.te), makeLine("")]
+    };
   }
 
   if (base === "cat") {
     const p = projectsData.find((x) => x.name.toLowerCase() === arg);
-    if (!p) return [makeLine("cat: " + (arg || "?") + ": no such project. try 'ls projects'.", C.red), makeLine("")];
+    if (!p) return { action: { type: "none" }, lines: [makeLine("cat: " + (arg || "?") + ": no such project. try 'ls projects'.", C.red), makeLine("")] };
     const out: TerminalLine[] = [
       makeLine(p.name, C.cy, "700"),
       makeLine(p.tagline, C.te),
@@ -134,13 +158,15 @@ export function execCommand(raw: string): TerminalLine[] {
     out.push(makeLine("stack:  " + p.stack.join(", "), C.mu));
     out.push(makeLine("status: " + p.status + "   ·   " + p.link.label + ": " + p.link.href, C.mu));
     out.push(makeLine(""));
-    return out;
+    return { action: { type: "none" }, lines: out };
   }
 
   if (base === "case") {
     const p = projectsData.find((x) => x.name.toLowerCase() === arg);
-    if (!p) return [makeLine("case: " + (arg || "?") + ": no such project. try 'ls projects'.", C.red), makeLine("")];
-    return [
+    if (!p) return { action: { type: "none" }, lines: [makeLine("case: " + (arg || "?") + ": no such project. try 'ls projects'.", C.red), makeLine("")] };
+    return {
+      action: { type: "none" },
+      lines: [
       makeLine(p.name + " — case study", C.cy, "700"),
       makeLine(""),
       makeLine("problem", C.te, "700"),
@@ -155,20 +181,24 @@ export function execCommand(raw: string): TerminalLine[] {
       makeLine("stack:  " + p.stack.join(", "), C.mu),
       makeLine(p.link.label + ":     " + p.link.href, C.mu),
       makeLine("")
-    ];
+      ]
+    };
   }
 
   if (base === "open") {
     const p = projectsData.find((x) => x.name.toLowerCase() === arg);
-    if (!p) return [makeLine("open: " + (arg || "?") + ": no such project.", C.red), makeLine("")];
-    return [makeLine("opening " + p.name + " → " + p.link.href, C.te), makeLine("")];
+    if (!p) return { action: { type: "none" }, lines: [makeLine("open: " + (arg || "?") + ": no such project.", C.red), makeLine("")] };
+    return {
+      action: { type: "openUrl", url: p.link.href },
+      lines: [makeLine("opening " + p.name + " → " + p.link.href, C.te), makeLine("")]
+    };
   }
 
-  if (base === "echo") return [makeLine(parts.slice(1).join(" ")), makeLine("")];
-  if (base === "date") return [makeLine(new Date().toString(), C.mu), makeLine("")];
-  if (base === "clear") return [];
-  if (base === "banner") return getBanner();
-  if (base === "sudo") return [makeLine("nice try. permission denied.", C.am), makeLine("")];
+  if (base === "echo") return { action: { type: "none" }, lines: [makeLine(parts.slice(1).join(" ")), makeLine("")] };
+  if (base === "date") return { action: { type: "none" }, lines: [makeLine(new Date().toString(), C.mu), makeLine("")] };
+  if (base === "clear") return { action: { type: "none" }, lines: [] };
+  if (base === "banner") return { action: { type: "none" }, lines: getBanner() };
+  if (base === "sudo") return { action: { type: "none" }, lines: [makeLine("nice try. permission denied.", C.am), makeLine("")] };
 
-  return [makeLine("command not found: " + base + "  —  type 'help'", C.red), makeLine("")];
+  return { action: { type: "none" }, lines: [makeLine("command not found: " + base + "  —  type 'help'", C.red), makeLine("")] };
 }
