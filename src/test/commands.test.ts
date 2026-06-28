@@ -1,5 +1,6 @@
 import { describe, it, expect } from "vitest";
 import { execCommand, getBanner } from "@/lib/commands";
+import { servicesData } from "@/data/services";
 
 describe("getBanner", () => {
   it("returns 4 lines", () => {
@@ -55,9 +56,12 @@ describe("execCommand", () => {
     expect(combined).toMatch(/email/i);
   });
 
-  it("services lists all 8 services", () => {
+  it("services lists all services", () => {
     const result = execCommand("services");
-    expect(result.filter((l) => l.text.startsWith("  ") && !l.text.startsWith("    "))).toHaveLength(8);
+    const matchedServices = result
+      .map((l) => l.text.trim())
+      .filter((text) => servicesData.some((s) => s.name === text));
+    expect(matchedServices).toHaveLength(servicesData.length);
   });
 
   it("ls projects lists all project names", () => {
