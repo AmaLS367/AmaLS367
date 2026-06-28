@@ -58,10 +58,10 @@ describe("execCommand", () => {
 
   it("services lists all services", () => {
     const result = execCommand("services");
-    const matchedServices = result
-      .map((l) => l.text.trim())
-      .filter((text) => servicesData.some((s) => s.name === text));
-    expect(matchedServices).toHaveLength(servicesData.length);
+    const printedNames = result
+      .filter((l) => l.text.startsWith("  ") && !l.text.startsWith("    "))
+      .map((l) => l.text.trim());
+    expect(printedNames).toEqual(servicesData.map((s) => s.name));
   });
 
   it("ls projects lists all project names", () => {
