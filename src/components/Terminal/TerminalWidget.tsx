@@ -29,21 +29,18 @@ export function TerminalWidget() {
       return;
     }
 
-    if (trimmed.toLowerCase() === "github") {
-      try { window.open("https://github.com/AmaLS367", "_blank", "noopener"); } catch (_) {}
-    }
-    if (trimmed.toLowerCase() === "telegram") {
-      try { window.open("https://t.me/Amanel0", "_blank", "noopener"); } catch (_) {}
-    }
-    if (trimmed.toLowerCase().startsWith("open ")) {
-      const arg = trimmed.slice(5).trim().toLowerCase();
-      const p = projectsData.find((x) => x.name.toLowerCase() === arg);
-      if (p) try { window.open(p.link.href, "_blank", "noopener"); } catch (_) {}
-    }
-
     const echo = makeLine(raw, "#ece0cf", "400", true);
     const result = execCommand(raw);
-    setLines((prev) => [...prev, echo, ...result]);
+
+    if (result.action.type === "openUrl") {
+      try {
+        window.open(result.action.url, "_blank", "noopener");
+      } catch (_) {
+        // ignore
+      }
+    }
+
+    setLines((prev) => [...prev, echo, ...result.lines]);
     setInput("");
 
     if (trimmed) {

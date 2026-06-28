@@ -13,14 +13,18 @@ const Index = () => {
       if (saved === "amber" || saved === "cyan" || saved === "green" || saved === "mono") {
         return saved as ThemeName;
       }
-    } catch (e) {}
+    } catch (e) {
+      // ignore
+    }
     return "amber";
   });
 
   const handleSetAccent = (themeName: ThemeName) => {
     try {
       localStorage.setItem("amadev_accent", themeName);
-    } catch (e) {}
+    } catch (e) {
+      // ignore
+    }
     setAccent(themeName);
   };
 
