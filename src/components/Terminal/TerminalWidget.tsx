@@ -30,15 +30,21 @@ export function TerminalWidget() {
     }
 
     if (trimmed.toLowerCase() === "github") {
-      try { window.open("https://github.com/AmaLS367", "_blank", "noopener"); } catch (_) {}
+      try { window.open("https://github.com/AmaLS367", "_blank", "noopener"); } catch (_) {
+        // ignore
+      }
     }
     if (trimmed.toLowerCase() === "telegram") {
-      try { window.open("https://t.me/Amanel0", "_blank", "noopener"); } catch (_) {}
+      try { window.open("https://t.me/Amanel0", "_blank", "noopener"); } catch (_) {
+        // ignore
+      }
     }
     if (trimmed.toLowerCase().startsWith("open ")) {
       const arg = trimmed.slice(5).trim().toLowerCase();
       const p = projectsData.find((x) => x.name.toLowerCase() === arg);
-      if (p) try { window.open(p.link.href, "_blank", "noopener"); } catch (_) {}
+      if (p) try { window.open(p.link.href, "_blank", "noopener"); } catch (_) {
+        // ignore
+      }
     }
 
     const echo = makeLine(raw, "#ece0cf", "400", true);
