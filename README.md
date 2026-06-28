@@ -92,18 +92,18 @@
       <p>Telegram AI assistant with voice support, external APIs, offline speech recognition, and async processing.</p>
     </td>
     <td width="50%" valign="top">
-      <h3><a href="https://github.com/AmaLS367/TestizerFunnelEngine">📬 TestizerFunnelEngine</a></h3>
-      <p>Email funnel and analytics system with Brevo integration, MySQL, background processing, and product-style structure.</p>
+      <h3><a href="https://github.com/AmaLS367/FaceScore">🧠 FaceScore</a></h3>
+      <p>Tauri desktop app built with React and TypeScript, focused on local-first workflow, clean UI, structured reports, and PDF export.</p>
     </td>
   </tr>
   <tr>
     <td width="50%" valign="top">
-      <h3><a href="https://github.com/AmaLS367/ama-freelance-crm">🗂️ ama-freelance-crm</a></h3>
-      <p>Backend-focused freelance CRM built with FastAPI, Aiogram, PostgreSQL, and typed service layers.</p>
+      <h3><a href="https://github.com/AmaLS367/TradeMcp">📈 TradeMcp</a></h3>
+      <p>Remote MCP server and dashboard with OAuth, encrypted credentials, exchange integrations, typed tools, and strong safety boundaries.</p>
     </td>
     <td width="50%" valign="top">
-      <h3><a href="https://github.com/AmaLS367/Trading-research-assistant">📈 Trading-research-assistant</a></h3>
-      <p>Research-oriented Python system with a mature structure, tests, docs, and long-term project discipline.</p>
+      <h3><a href="https://github.com/AmaLS367/Factoria">🏭 Factoria</a></h3>
+      <p>AI-powered data collection toolkit that enriches spreadsheets with web search, LLM extraction, SQLite checkpointing, and Excel export.</p>
     </td>
   </tr>
 </table>
