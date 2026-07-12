@@ -22,3 +22,17 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+.superpowers/
+# Added by code-review-graph
+.code-review-graph/
+.mcp.json
+.opencode.json
+.windsurfrules
+AGENTS.md
+CLAUDE.md
+GEMINI.md
+.kiro/
+.claude/
+.cursor/
+
+docs/superpowers
