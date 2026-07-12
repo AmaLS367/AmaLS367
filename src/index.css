@@ -2,81 +2,57 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Design system. All shared colors, fonts, surfaces and motion live here. */
 
 @layer base {
   :root {
-    /* Dark terminal-inspired developer theme (single theme) */
-    --background: 220 18% 6%;
-    --foreground: 150 15% 90%;
+    /* shadcn-mapped vars, re-pointed to the amber theme */
+    --background: 30 33% 3%;
+    --foreground: 36 42% 87%;
 
-    --card: 220 16% 9%;
-    --card-foreground: 150 15% 92%;
+    --card: 28 30% 5%;
+    --card-foreground: 36 42% 90%;
 
-    --popover: 220 18% 7%;
-    --popover-foreground: 150 15% 92%;
+    --popover: 30 33% 4%;
+    --popover-foreground: 36 42% 90%;
 
-    --primary: 142 70% 55%;
-    --primary-foreground: 220 20% 6%;
-    --primary-glow: 142 90% 65%;
+    --primary: 37 100% 68%;
+    --primary-foreground: 30 33% 3%;
 
-    --secondary: 220 14% 14%;
-    --secondary-foreground: 150 15% 92%;
+    --secondary: 30 25% 9%;
+    --secondary-foreground: 36 42% 90%;
 
-    --muted: 220 14% 12%;
-    --muted-foreground: 220 10% 60%;
+    --muted: 30 25% 8%;
+    --muted-foreground: 33 15% 55%;
 
-    --accent: 165 80% 50%;
-    --accent-foreground: 220 20% 6%;
+    --accent: 24 100% 62%;
+    --accent-foreground: 30 33% 3%;
 
     --destructive: 0 75% 55%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 220 14% 16%;
-    --input: 220 14% 16%;
-    --ring: 142 70% 55%;
-
-    --terminal-prompt: 142 70% 55%;
-    --terminal-cursor: 165 80% 50%;
-
-    --gradient-hero: radial-gradient(ellipse at top, hsl(142 70% 18% / 0.35), transparent 60%), linear-gradient(180deg, hsl(220 18% 6%), hsl(220 18% 4%));
-    --gradient-card: linear-gradient(140deg, hsl(220 16% 10%), hsl(220 18% 7%));
-    --gradient-accent: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent)));
-
-    --shadow-elevated: 0 20px 60px -20px hsl(142 70% 30% / 0.25);
-    --shadow-card: 0 1px 0 hsl(0 0% 100% / 0.04) inset, 0 10px 30px -15px hsl(0 0% 0% / 0.6);
-    --shadow-glow: 0 0 40px hsl(var(--primary) / 0.35);
+    --border: 33 30% 12%;
+    --input: 33 30% 12%;
+    --ring: 37 100% 68%;
 
     --radius: 0.75rem;
 
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-
-  .dark {
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* site tokens (accents --c1/--c2 are set inline from React) */
+    --c1: #ffbe5c;
+    --c2: #ff8a3d;
+    --bg: #0a0805;
+    --bg-card1: #120d08;
+    --bg-card2: #0c0905;
+    --line-1: #1e160d;
+    --line-2: #271d12;
+    --line-3: #2c2114;
+    --tx-bright: #fff4e2;
+    --tx: #ece0cf;
+    --tx-body: #a8927a;
+    --tx-mid: #8a7a63;
+    --tx-dim: #6b5b45;
+    --tx-faint: #5f5240;
+    --tx-ghost: #3f3422;
   }
 }
 
@@ -88,10 +64,6 @@ All colors MUST be HSL.
   body {
     @apply bg-background text-foreground font-sans antialiased;
     font-feature-settings: "ss01", "cv11";
-    background-image:
-      radial-gradient(circle at 20% -10%, hsl(142 70% 20% / 0.18), transparent 50%),
-      radial-gradient(circle at 90% 10%, hsl(165 80% 25% / 0.12), transparent 45%);
-    background-attachment: fixed;
   }
 
   html {
@@ -103,37 +75,97 @@ All colors MUST be HSL.
   .font-mono {
     font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
   }
-  .font-sans {
+  .font-sans,
+  .font-body {
     font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
   }
-  .text-gradient {
-    background: var(--gradient-accent);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
+  .font-display {
+    font-family: 'Space Grotesk', 'Inter', ui-sans-serif, system-ui, sans-serif;
   }
-  .grid-bg {
-    background-image:
-      linear-gradient(hsl(var(--border) / 0.4) 1px, transparent 1px),
-      linear-gradient(90deg, hsl(var(--border) / 0.4) 1px, transparent 1px);
-    background-size: 48px 48px;
-    mask-image: radial-gradient(ellipse at center, black 0%, transparent 75%);
+
+  .card {
+    border: 1px solid var(--line-3);
+    border-radius: 12px;
+    background: linear-gradient(180deg, var(--bg-card1), var(--bg-card2));
+    box-shadow: inset 0 1px 0 rgba(255, 244, 226, 0.04), 0 12px 32px -18px rgba(0, 0, 0, 0.7);
+    transition: border-color 0.18s ease, box-shadow 0.18s ease, transform 0.18s ease;
   }
+  .card-hover:hover {
+    border-color: color-mix(in srgb, var(--c1) 45%, var(--line-3));
+    box-shadow: inset 0 1px 0 rgba(255, 244, 226, 0.05), 0 0 24px -6px color-mix(in srgb, var(--c1) 30%, transparent), 0 16px 40px -18px rgba(0, 0, 0, 0.75);
+    transform: translateY(-2px);
+  }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(14px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  .reveal.is-visible {
+    opacity: 1;
+    transform: none;
+  }
+
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 11px 22px;
+    border-radius: 8px;
+    background: var(--c1);
+    color: var(--bg);
+    font-weight: 700;
+    font-size: 14px;
+    text-decoration: none;
+    letter-spacing: 0.01em;
+    box-shadow: 0 0 20px -4px color-mix(in srgb, var(--c1) 45%, transparent);
+    transition: box-shadow 0.18s ease, transform 0.18s ease, filter 0.18s ease;
+  }
+  .btn-primary:hover {
+    transform: translateY(-1px);
+    filter: brightness(1.06);
+    box-shadow: 0 0 28px -4px color-mix(in srgb, var(--c1) 60%, transparent);
+  }
+
+  .btn-ghost {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 11px 22px;
+    border-radius: 8px;
+    border: 1px solid var(--line-3);
+    background: rgba(20, 15, 8, 0.6);
+    color: var(--tx);
+    font-size: 14px;
+    text-decoration: none;
+    transition: border-color 0.18s ease, background 0.18s ease, transform 0.18s ease;
+  }
+  .btn-ghost:hover {
+    border-color: color-mix(in srgb, var(--c1) 40%, var(--line-3));
+    background: rgba(28, 21, 12, 0.7);
+    transform: translateY(-1px);
+  }
+
+  .terminal-scanlines {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 2;
+    background: repeating-linear-gradient(0deg, rgba(0, 0, 0, 0) 0px, rgba(0, 0, 0, 0) 2px, rgba(0, 0, 0, 0.16) 3px, rgba(0, 0, 0, 0) 4px);
+    mix-blend-mode: multiply;
+  }
+
   .terminal-cursor::after {
     content: "▍";
     margin-left: 0.15em;
-    color: hsl(var(--terminal-cursor));
+    color: var(--c2);
     animation: blink 1.1s steps(1) infinite;
   }
   @keyframes blink {
     50% { opacity: 0; }
   }
-  .card-surface {
-    background: var(--gradient-card);
-    box-shadow: var(--shadow-card);
-  }
-  
-  /* Terminal custom scrollbar and selection colors */
+
+  /* Terminal custom scrollbar */
   .term-scroll::-webkit-scrollbar {
     width: 8px;
     height: 8px;
@@ -144,6 +176,26 @@ All colors MUST be HSL.
   }
   .term-scroll::-webkit-scrollbar-track {
     background: transparent;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .card,
+  .card-hover:hover,
+  .btn-primary,
+  .btn-primary:hover,
+  .btn-ghost,
+  .btn-ghost:hover {
+    transition: none;
+    transform: none;
+  }
+  [data-anim-expand] {
+    transition: none !important;
   }
 }
 
@@ -158,4 +210,3 @@ All colors MUST be HSL.
     opacity: 0;
   }
 }
-
