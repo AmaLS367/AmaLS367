@@ -67,9 +67,11 @@ export function TerminalWidget() {
   return (
     <div
       onClick={() => inputRef.current?.focus()}
+      className="font-mono"
       style={{
+        position: "relative",
         marginTop: "36px",
-        border: "1px solid #2c2114",
+        border: "1px solid var(--line-3)",
         borderRadius: "10px",
         overflow: "hidden",
         background: "linear-gradient(180deg,#15100a,#0c0905)",
@@ -77,9 +79,14 @@ export function TerminalWidget() {
         cursor: "text"
       }}
     >
-      <div style={{ display: "flex", alignItems: "center", gap: "8px", padding: "9px 14px", borderBottom: "1px solid #2c2114", background: "rgba(20,15,8,.7)" }}>
-        <span style={{ color: "var(--c2)", fontSize: "12px" }}>▌</span>
-        <span style={{ fontSize: "12px", color: "#6b5b45" }}>ama@dev: ~/portfolio — zsh — 80×24</span>
+      <div aria-hidden="true" className="terminal-scanlines" />
+      <div style={{ display: "flex", alignItems: "center", gap: "8px", padding: "9px 14px", borderBottom: "1px solid var(--line-3)", background: "rgba(20,15,8,.7)" }}>
+        <span style={{ display: "flex", gap: "6px", marginRight: "4px" }}>
+          <span style={{ width: "11px", height: "11px", borderRadius: "999px", background: "#ff5f56" }}></span>
+          <span style={{ width: "11px", height: "11px", borderRadius: "999px", background: "#ffbd2e" }}></span>
+          <span style={{ width: "11px", height: "11px", borderRadius: "999px", background: "var(--c1)" }}></span>
+        </span>
+        <span style={{ fontSize: "12px", color: "var(--tx-dim)" }}>ama@dev: ~/portfolio — zsh — 80×24</span>
       </div>
       <div
         className="term-scroll"
